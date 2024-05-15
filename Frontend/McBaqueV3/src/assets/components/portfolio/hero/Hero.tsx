@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { NavigationUI } from './NavigationUI'
 
 export const Hero = () => {

@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Hero } from "../components/portfolio/hero/Hero";
 
 export const Portfolio = () => {
