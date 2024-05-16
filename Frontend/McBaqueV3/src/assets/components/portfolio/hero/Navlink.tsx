@@ -13,6 +13,7 @@ export const Navlink = ({children, Linkto}: NavlinkType) => {
     spy={true}
     smooth={true}
     duration={1000}
+    
     >
         {children}
     

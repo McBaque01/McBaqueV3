@@ -6,9 +6,10 @@ interface FadeJrType {
     children?: React.ReactNode;
     direction?: string;
     delay?: number;  
+    classname?: string;
 }
 
-export const FadeJr = ({children, direction, delay}: FadeJrType) => {
+export const FadeJr = ({children, direction, delay, classname}: FadeJrType) => {
     
     const Fademotion = {
         hidden:{
@@ -32,6 +33,9 @@ export const FadeJr = ({children, direction, delay}: FadeJrType) => {
   return (
         <motion.div
             variants={Fademotion}
+            className={classname}
+            // whileHover={{scale:1.1}}
+            
         >
             {children}
         </motion.div>
