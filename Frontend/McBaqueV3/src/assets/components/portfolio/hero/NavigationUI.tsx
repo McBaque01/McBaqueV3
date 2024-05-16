@@ -1,6 +1,6 @@
 import McLogo from '../../../media/image/MyLogoV2.svg'
 import { Fade } from '../../framer-motion/Fade'
-import { FadeImg } from '../../framer-motion/FadeImg'
+
 import { FadeJr } from '../../framer-motion/FadeJr'
 import { FadeSVG } from '../../framer-motion/FadeSVG'
 

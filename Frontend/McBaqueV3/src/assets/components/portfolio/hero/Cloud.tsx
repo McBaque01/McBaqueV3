@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { FadeSVG } from '../../framer-motion/FadeSVG'
 import { Fade } from '../../framer-motion/Fade'
 import CloudSVG from '../../../media/image/Cloud.svg'

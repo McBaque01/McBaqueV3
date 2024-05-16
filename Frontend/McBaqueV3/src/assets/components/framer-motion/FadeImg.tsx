@@ -8,7 +8,7 @@ interface FadeImgType{
     classname?: string;
     delay?:number;
 }
-export const FadeImg = ({ImagePath, direction, classname, delay}: FadeImgType) => {
+export const FadeImg = ({ImagePath, altName, direction, classname, delay}: FadeImgType) => {
 
     const Fademotion = {
         hidden:{
@@ -32,13 +32,15 @@ export const FadeImg = ({ImagePath, direction, classname, delay}: FadeImgType) =
       }
 
   return (
-        <motion.svg
+        <motion.img
+        src={ImagePath}
+        alt={altName}
         variants={Fademotion}
         className={classname}
-        >
-            <image href={ImagePath} className="w-full h-full" />
+        />
+          
 
-        </motion.svg>
+      
   )
 }
 
