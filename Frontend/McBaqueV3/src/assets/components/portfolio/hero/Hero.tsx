@@ -2,6 +2,7 @@ import { Cloud } from "./Cloud";
 import { HeroContent } from "./HeroContent";
 import { NavigationUI } from "./NavigationUI";
 
+ 
 export const Hero = () => {
   return (
     <div
