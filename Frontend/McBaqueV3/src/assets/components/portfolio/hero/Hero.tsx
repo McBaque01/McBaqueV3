@@ -9,11 +9,11 @@ export const Hero = () => {
       id="Hero"
       className="relative flex h-screen w-full justify-center bg-cblue"
     >
-      <div className=" relative h-full w-[80%] pb-[16em]">
+      <div className=" relative h-full w-[80%] pb-[16em] ">
         <NavigationUI />
         <HeroContent />
         <Cloud
-          classname="w-fit h-fit absolute  top-[9em] 2xl:left-[16em] xl:left-[16em]  left-[90%] transition-all duration-1000"
+          classname="w-fit h-fit absolute  top-[7em] 2xl:left-[16em] xl:left-[16em]  left-[90%] transition-all duration-1000"
           direction="left"
           delay={2}
         />

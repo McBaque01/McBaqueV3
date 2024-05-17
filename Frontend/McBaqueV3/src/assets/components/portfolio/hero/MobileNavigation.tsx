@@ -6,8 +6,8 @@ import { Navlink } from "./Navlink";
 export const MobileNavigation = () => {
   const navigationContent = ["About", "Skill", "Contact"];
   return (
-    <div className="visible absolute -top-[0.5em] h-fit w-full overflow-hidden overflow-x-scroll py-2  xl:hidden 2xl:hidden">
-      <Fade className="flex w-fit gap-2" delay={0.4}>
+    <div className="visible absolute -top-[0.5em] h-fit w-full overflow-hidden overflow-x-scroll py-2 xl:hidden 2xl:hidden">
+      <Fade className="flex w-fit gap-1" delay={0.4}>
         {navigationContent &&
           navigationContent.map((content, index) => (
             <div className=" cursor-pointer">
