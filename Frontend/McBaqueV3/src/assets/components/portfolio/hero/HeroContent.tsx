@@ -2,7 +2,7 @@ import { Icon } from "@iconify/react";
 import { Fade } from "../../framer-motion/Fade";
 import { FadeJr } from "../../framer-motion/FadeJr";
 import { MobileNavigation } from "./MobileNavigation";
-import { InlineIcon } from "@iconify/react";
+
 
 export const HeroContent = () => {
   return (
