@@ -7,7 +7,7 @@ interface FadeJrType {
   direction?: string;
   delay?: number;
   classname?: string;
-  duration?:number;
+  duration?: number;
 }
 
 export const FadeJr = ({
@@ -27,9 +27,8 @@ export const FadeJr = ({
       opacity: 1,
       x: 0,
       y: 0,
-    
+
       transition: {
-        
         type: "tween",
         duration: duration,
         ...(delay && { delay: delay }),
