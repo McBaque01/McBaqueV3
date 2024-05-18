@@ -10,16 +10,19 @@ export const NavigationUI = () => {
   const navigationContent = ["About", "Skill", "Contact"];
 
   return (
-    <nav className="flex h-[6em] w-full flex-row items-center justify-center gap-6 transition-all duration-1000 xl:h-[8em] 2xl:h-[8em]">
-      <div className="flex h-full  w-full flex-1  flex-row items-center justify-start font-Montserrat font-black tracking-widest text-clightbrown">
+    <nav className="relative flex h-[6em] w-full flex-row items-center justify-center gap-6 transition-all duration-1000 xl:h-[8em] 2xl:h-[8em]">
+      <div className="relative flex  h-full w-full  flex-1 flex-row items-center justify-start font-Montserrat font-black tracking-widest text-clightbrown">
         <Fade
           className="flex w-[80%] justify-between sm:hidden md:hidden lg:hidden "
           delay={0.4}
         >
           {navigationContent &&
             navigationContent.map((content, index) => (
-              <div className="cursor-pointer transition-all hover:scale-110 hover:text-cred">
-                <FadeJr direction="down" key={index}>
+              <div
+                className="cursor-pointer transition-all hover:scale-110 hover:text-cred"
+                key={index}
+              >
+                <FadeJr direction="down">
                   <Navlink Linkto={content}>{content}</Navlink>
                 </FadeJr>
               </div>

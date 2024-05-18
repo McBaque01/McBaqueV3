@@ -35,7 +35,7 @@ h6 {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #ebeeb2;
+  background: #000000;
   border-radius: 5px;
 }
 

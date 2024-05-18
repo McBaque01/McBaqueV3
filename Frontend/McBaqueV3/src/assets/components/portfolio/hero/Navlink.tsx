@@ -4,11 +4,18 @@ import { Link as ScrollLink } from "react-scroll";
 interface NavlinkType {
   children: React.ReactNode;
   Linkto: string;
+  classname?: string;
 }
 
-export const Navlink = ({ children, Linkto }: NavlinkType) => {
+export const Navlink = ({ children, Linkto, classname }: NavlinkType) => {
   return (
-    <ScrollLink to={Linkto} spy={true} smooth={true} duration={1000}>
+    <ScrollLink
+      to={Linkto}
+      spy={true}
+      smooth={true}
+      duration={1000}
+      className={classname}
+    >
       {children}
     </ScrollLink>
   );
