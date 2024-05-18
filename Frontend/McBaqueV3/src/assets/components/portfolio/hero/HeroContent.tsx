@@ -2,6 +2,7 @@ import { Icon } from "@iconify/react";
 import { Fade } from "../../framer-motion/Fade";
 import { FadeJr } from "../../framer-motion/FadeJr";
 import { MobileNavigation } from "./MobileNavigation";
+import { InlineIcon } from "@iconify/react";
 
 export const HeroContent = () => {
   return (
@@ -40,20 +41,15 @@ export const HeroContent = () => {
         <FadeJr>
           <Icon
             icon="mage:linkedin"
-            width="50"
-            height="50"
-            color="#f44f4f"
-            className="relative z-10 transition-all duration-500 hover:scale-125 xl:p-0 2xl:p-0"
+            className="relative z-10 transition-all duration-500 hover:scale-125 xl:p-0 2xl:p-0 text-[3em] 2xl:text-[4em] xl:text-[4em]  text-cred"
           />
+          
         </FadeJr>
 
         <FadeJr>
           <Icon
             icon="jam:github"
-            width="50"
-            height="50"
-            color="#f44f4f"
-            className="relative z-10  transition-all duration-500  hover:scale-125 xl:p-0 2xl:p-0"
+            className="relative z-10  transition-all duration-500  hover:scale-125 xl:p-0 2xl:p-0 text-[3em] 2xl:text-[4em] xl:text-[4em]  text-cred "
           />
         </FadeJr>
       </Fade>
