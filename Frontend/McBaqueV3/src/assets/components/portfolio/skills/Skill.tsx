@@ -1,8 +1,7 @@
-
 import { useEffect, useState } from 'react'
 import { IconHandler } from './IconHandler'
-import { Icon, InlineIcon } from '@iconify/react/dist/iconify.js';
-import { IconifyIcon } from '@iconify/react/dist/iconify.js';
+import { InlineIcon } from '@iconify/react/dist/iconify.js';
+
 
 export interface skilltype {
   name: string;
@@ -35,7 +34,7 @@ export const Skill = () => {
     <div className='bg-cblue h-fit w-full flex flex-col items-center relative'>
       
 
-        {/* <div className=' max-w-[50em] max-h-[50em] min-w-[30em] min-h-[30em] 2xl:min-w-[50em] 2xl:min-h-[50em] xl:min-w-[50em] xl:min-h-[50em] absolute top-1 left-1/2 transform -translate-x-1/2 translate-y-1/2 object-contain bg-slate-200'> */}
+     
             <div className='absolute top-[7em] 2xl:top-[6em] flex justify-center w-full '>
               <div>
                 <InlineIcon icon={currSkill?.iconpath as string | ""} className='text-[30em] 2xl:text-[50em] xl:text-[50em] opacity-10'/>
@@ -45,13 +44,13 @@ export const Skill = () => {
               </h1>
             </div>
            
-        {/* </div> */}
+      
       
 
 
         <div className='w-[80%] h-screen min-h-fit flex flex-col gap-2'>
             <div className='flex flex-col relative '>
-              <h1 className='w-full  text-cred font-black tracking-widest text-center text-[2em] xl:text-[4em] 2xl:text-[4em] font-Montserrat py-4'>TECH STACKS</h1>
+              <h1 className='w-full  text-cred font-black tracking-widest text-center text-[2em] xl:text-[3.6em] 2xl:text-[3.6em] font-Montserrat py-4'>TECH STACKS</h1>
               <div className='flex justify-center'>
                 <div className='w-fit h-fit p-4 grid 2xl:grid-cols-8 xl:grid-cols-7 lg:grid-cols-6 md:grid-cols-5 grid-cols-4 gap-6 min-w-[20em] '>
                     
@@ -80,7 +79,7 @@ export const Skill = () => {
               </div>
             </div>
             <div className='w-full'>
-              <h1>PROJEECTS</h1>
+              <h1 className='text-[2em] xl:text-[3.6em] 2xl:text-[3.6em] font-Montserrat text-cred font-black tracking-widest py-5'>PROJECTS</h1>
             </div>
 
         </div>
