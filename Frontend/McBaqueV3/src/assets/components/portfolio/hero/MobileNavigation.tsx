@@ -6,7 +6,7 @@ export const MobileNavigation = () => {
   const navigationContent = ["About", "Skill", "Contact"];
   return (
     <div className="visible relative z-10 min-h-fit w-full xl:hidden 2xl:hidden ">
-      <div className="overflow-x-scroll">
+      <div className="overflow-x-scroll p-2">
         <Fade className="flex w-fit gap-1" delay={0.4}>
           {navigationContent &&
             navigationContent.map((content, index) => (
