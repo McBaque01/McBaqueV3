@@ -85,7 +85,7 @@ export const About = () => {
                 <h1 className="font-Montserrat text-[1em] font-bold text-cred xl:text-[1.6em] 2xl:text-[1.6em]">
                   Personal Collection
                 </h1>
-                <h2 className="font-Montserrat text-[1em] font-medium text-cblue">
+                <h2 className="font-Montserrat text-[1em] font-medium text-cblue  xl:text-[1.2em] 2xl:text-[1.2em]">
                   April 2023 - August 2023
                 </h2>
               </div>
