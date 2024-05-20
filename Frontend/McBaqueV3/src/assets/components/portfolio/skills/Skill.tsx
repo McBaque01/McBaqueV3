@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { IconHandler } from './IconHandler'
 import { InlineIcon } from '@iconify/react/dist/iconify.js';
+import ValoAPI from "../../../media/image/ValoAPI.png"
+import handleRedirectToURL from '../../../utils/handleRedirectToURL';
 
 
 export interface skilltype {
@@ -31,7 +33,7 @@ export const Skill = () => {
 
     
   return (
-    <div id="Skill" className='bg-cblue min-h-fit h-lvh w-full flex flex-col items-center relative'>
+    <div id="Skill" className='bg-cblue h-fit w-full flex flex-col items-center relative'>
       
 
 
@@ -48,7 +50,7 @@ export const Skill = () => {
       
 
 
-        <div className='w-[80%] h-dvh min-h-full flex flex-col gap-2 relative'>
+        <div className='w-[80%] min-h-screen flex flex-col gap-2 relative'>
             <div className='flex flex-col relative '>
               <h1 className='w-full   text-cred font-black tracking-widest text-center text-[2em] xl:text-[4em] 2xl:text-[4em] font-Montserrat pt-4'>TECH STACKS</h1>
               <h1 className='w-full   text-clightbrown font-black tracking-widest text-center text-[1.4em] xl:text-[2em] 2xl:text-[2em] font-Montserrat uppercase'>What I'm capable of</h1>
@@ -79,9 +81,45 @@ export const Skill = () => {
                 </div>
               </div>
             </div>
-            <div className='w-full'>
+            <div className='w-full flex flex-col'>
               <h1 className='text-[2em] xl:text-[3.6em] 2xl:text-[3.6em] font-Montserrat text-cred font-black tracking-widest py-5'>PROJECTS</h1>
-              <div className='w-full'>
+              <div className='w-full flex flex-col items-center gap-2'>
+                 
+                  <div className='xl:w-[80%] 2xl:w-[80%] w-full aspect-[3/0.8] bg-gray-800 rounded-[10px] p-2 flex flex-col xl:flex-row  2xl:flex-row gap-2'>
+
+                        <img src={ValoAPI} alt="ValoAPI img" className='xl:w-[45%] 2xl:w-[45%] h-full object-fill rounded-[7px]'/>
+
+                        <div className='w-full h-full  gap-2 flex flex-col relative'>
+                          <div className=' h-fit w-full font-Montserrat cursor-default xl:text-[1em] 2xl:text-[1em] text-[14px]'>
+                            <h1 className='font-semibold text-cred leading-none'>Name</h1>
+                            <h2 className=' font-medium text-slate-500 leading-2'>VALO-API</h2>
+                          </div>
+
+                          <div className=' h-fit w-full font-Montserrat cursor-default xl:text-[1em] 2xl:text-[1em] text-[14px]'>
+                            <h1 className='font-semibold text-cred leading-none '>Domain</h1>
+                            <h2 className=' font-medium text-slate-500 leading-2 underline cursor-pointer' onClick={() => handleRedirectToURL({ url: 'https://valoapi.vercel.app/' })}>https://valoapi.vercel.app/</h2>
+                          </div>
+
+                          <div className=' h-fit w-full font-Montserrat cursor-default xl:text-[1em] 2xl:text-[1em] text-[14px]'>
+                            <h1 className='font-semibold text-cred leading-none'>Description</h1>
+                            <h2 className=' font-medium text-slate-500 leading-2'>My web app is designed to provide players with comprehensive details and easy access to information about weapons, agents, and in-game collectibles. Explore these features to enhance your Valorant experience</h2>
+                          </div>
+
+                          <div className=' h-fit w-full font-Montserrat cursor-default font-medium xl:text-[1em] 2xl:text-[1em] text-[14px]'>
+                            <div className='bg-gray-700 w-fit py-2 px-4 rounded-full'>
+                              <h1 className='text-cred leading-none'>React</h1>
+                            </div>
+                          </div>
+
+                        </div>
+                  </div>
+
+                  <div  className='w-[80%] aspect-[3/0.8] bg-gray-800'>
+
+                  </div>
+                  <div  className='w-[80%] aspect-[3/0.8] bg-gray-800'>
+
+                  </div>
 
               </div>
             </div>
