@@ -3,6 +3,8 @@ import { IconHandler } from './IconHandler'
 import { InlineIcon } from '@iconify/react/dist/iconify.js';
 import ValoAPI from "../../../media/image/ValoAPI.png"
 import handleRedirectToURL from '../../../utils/handleRedirectToURL';
+import LightNSeek from '../../../media/image/LightNSeek.png'
+import PortfolioV3 from '../../../media/image/PortfolioV3.png'
 
 
 export interface skilltype {
@@ -81,7 +83,7 @@ export const Skill = () => {
                 </div>
               </div>
             </div>
-            <div className='w-full flex flex-col'>
+            <div className='w-full flex flex-col py-4'>
               <h1 className='text-[2em] xl:text-[3.6em] 2xl:text-[3.6em] font-Montserrat text-cred font-black tracking-widest py-5'>PROJECTS</h1>
               <div className='w-full flex flex-col items-center gap-2'>
                  
@@ -118,24 +120,82 @@ export const Skill = () => {
 
                           <div className=' h-fit w-full font-Montserrat cursor-default font-medium xl:text-[1em] 2xl:text-[1em] text-[14px] flex flex-row flex-wrap gap-1'>
                             
-                            <div className='bg-gray-700 w-fit py-2 px-4 rounded-full flex justify-between items-center leading-none'>
+                            <div className='bg-gray-700 w-fit py-2 px-4 rounded-full flex justify-between items-center leading-none hover:scale-110 duration-300'>
                               <h1 className='text-cred leading-none text-[14px] xl:text-[1em] 2xl:text-[1em]'>React</h1>
                             </div>
 
-                            <div className='bg-gray-700 w-fit py-2 px-4 rounded-full flex justify-between items-center leading-none'>
+                            <div className='bg-gray-700 w-fit py-2 px-4 rounded-full flex justify-between items-center leading-none hover:scale-110 duration-300'>
                               <h1 className='text-cred leading-none text-[14px] xl:text-[1em] 2xl:text-[1em]'>TailwindCSS</h1>
                             </div>
 
-                            <div className='bg-gray-700 w-fit py-2 px-4 rounded-full flex justify-between items-center leading-none'>
+                            <div className='bg-gray-700 w-fit py-2 px-4 rounded-full flex justify-between items-center leading-none hover:scale-110 duration-300'>
                               <h1 className='text-cred leading-none text-[14px] xl:text-[1em] 2xl:text-[1em]'>Vite</h1>
                             </div>
 
-                            <div className='bg-gray-700 w-fit py-2 px-4 rounded-full flex justify-between items-center leading-none'>
+                            <div className='bg-gray-700 w-fit py-2 px-4 rounded-full flex justify-between items-center leading-none hover:scale-110 duration-300'>
                               <h1 className='text-cred leading-none text-[14px] xl:text-[1em] 2xl:text-[1em]'>Typescript</h1>
                             </div>
 
-                            <div className='bg-gray-700 w-fit py-2 px-4 rounded-full flex justify-between items-center leading-none'>
-                              <h1 className='text-cred leading-none text-[14px] xl:text-[1em] 2xl:text-[1em]'>Framer</h1>
+                            
+
+                          </div>
+
+                        </div>
+                  </div>
+
+
+
+
+
+
+                  <div className='xl:w-[80%] 2xl:w-[80%] w-full aspect-[3/0.8] bg-gray-800 rounded-[10px] p-2 flex flex-col xl:flex-row  2xl:flex-row gap-2'>
+
+
+                        <img src={LightNSeek} alt="LightNSeek" className='xl:w-[45%] 2xl:w-[45%] h-full object-fill rounded-[7px]'/>
+
+                        <div className='w-full h-full  gap-2 flex flex-col relative'>
+
+                          <div className='absolute font-semibold text-slate-500 top-0 right-0 font-Montserrat text-[14px]
+                          before:bg-[#0079D0] before:rounded-full before:content-[""] before:p-1 before:absolute before:top-[6px]
+                          
+                          '>
+                            
+                            <h1 className='px-3'>Done</h1>
+                          </div>
+
+
+                          <div className=' h-fit w-full font-Montserrat cursor-default xl:text-[1em] 2xl:text-[1em] text-[14px]'>
+                            <h1 className='font-semibold text-cred leading-none'>Name</h1>
+                            <h2 className=' font-medium text-slate-500 leading-2'>LIGHT N SEEK</h2>
+                          </div>
+
+                          <div className=' h-fit w-full font-Montserrat cursor-default xl:text-[1em] 2xl:text-[1em] text-[14px]'>
+                            <h1 className='font-semibold text-cred leading-none '>Domain</h1>
+                            <h2 className=' font-medium text-slate-500 leading-2 underline cursor-pointer' onClick={() => handleRedirectToURL({ url: 'https://light-n-seek.vercel.app/' })}>https://light-n-seek.vercel.app/</h2>
+                          </div>
+
+                          <div className=' h-fit w-full font-Montserrat cursor-default xl:text-[1em] 2xl:text-[1em] text-[14px]'>
+                            <h1 className='font-semibold text-cred leading-none'>Description</h1>
+                            <h2 className=' font-medium text-slate-500 leading-2'>Light N Seek is an engaging and challenging memory game where players must repeat sequences of lights to progress.
+                            Each level introduces a new sequence, requiring sharp focus and quick thinking. Can you master the light patterns and reach the highest levels?.</h2>
+                          </div>
+
+                          <div className=' h-fit w-full font-Montserrat cursor-default font-medium xl:text-[1em] 2xl:text-[1em] text-[14px] flex flex-row flex-wrap gap-1'>
+                            
+                            <div className='bg-gray-700 w-fit py-2 px-4 rounded-full flex justify-between items-center leading-none hover:scale-110 duration-300'>
+                              <h1 className='text-cred leading-none text-[14px] xl:text-[1em] 2xl:text-[1em]'>React</h1>
+                            </div>
+
+                            <div className='bg-gray-700 w-fit py-2 px-4 rounded-full flex justify-between items-center leading-none hover:scale-110 duration-300'>
+                              <h1 className='text-cred leading-none text-[14px] xl:text-[1em] 2xl:text-[1em]'>TailwindCSS</h1>
+                            </div>
+
+                            <div className='bg-gray-700 w-fit py-2 px-4 rounded-full flex justify-between items-center leading-none hover:scale-110 duration-300'>
+                              <h1 className='text-cred leading-none text-[14px] xl:text-[1em] 2xl:text-[1em]'>Vite</h1>
+                            </div>
+
+                            <div className='bg-gray-700 w-fit py-2 px-4 rounded-full flex justify-between items-center leading-none hover:scale-110 duration-300'>
+                              <h1 className='text-cred leading-none text-[14px] xl:text-[1em] 2xl:text-[1em]'>Typescript</h1>
                             </div>
 
                           </div>
@@ -143,12 +203,68 @@ export const Skill = () => {
                         </div>
                   </div>
 
-                  <div  className='w-[80%] aspect-[3/0.8] bg-gray-800'>
 
-                  </div>
-                  <div  className='w-[80%] aspect-[3/0.8] bg-gray-800'>
 
+
+                  <div className='xl:w-[80%] 2xl:w-[80%] w-full aspect-[3/0.8] bg-gray-800 rounded-[10px] p-2 flex flex-col xl:flex-row  2xl:flex-row gap-2'>
+
+
+                        <img src={PortfolioV3} alt="PortfolioV3" className='xl:w-[45%] 2xl:w-[45%] h-full object-fill rounded-[7px]'/>
+
+                        <div className='w-full h-full  gap-2 flex flex-col relative'>
+
+                          <div className='absolute font-semibold text-slate-500 top-0 right-0 font-Montserrat text-[14px]
+                          before:bg-[#0079D0] before:rounded-full before:content-[""] before:p-1 before:absolute before:top-[6px]
+                          
+                          '>
+                            
+                            <h1 className='px-3'>Done</h1>
+                          </div>
+
+
+                          <div className=' h-fit w-full font-Montserrat cursor-default xl:text-[1em] 2xl:text-[1em] text-[14px]'>
+                            <h1 className='font-semibold text-cred leading-none'>Name</h1>
+                            <h2 className=' font-medium text-slate-500 leading-2'>PERSONAL PORTFOLIO</h2>
+                          </div>
+
+                          <div className=' h-fit w-full font-Montserrat cursor-default xl:text-[1em] 2xl:text-[1em] text-[14px]'>
+                            <h1 className='font-semibold text-cred leading-none '>Domain</h1>
+                            <h2 className=' font-medium text-slate-500 leading-2 underline cursor-pointer' onClick={() => handleRedirectToURL({ url: 'https://mcbaquev3.vercel.app/' })}>https://mcbaquev3.vercel.app/</h2>
+                          </div>
+
+                          <div className=' h-fit w-full font-Montserrat cursor-default xl:text-[1em] 2xl:text-[1em] text-[14px]'>
+                            <h1 className='font-semibold text-cred leading-none'>Description</h1>
+                            <h2 className=' font-medium text-slate-500 leading-2'>Explore my portfolio to see a diverse range of web development projects, each demonstrating my ability to deliver high-quality, scalable, and maintainable code. 
+                            From game development to interactive web applications with API, my work reflects my commitment to excellence in web development.</h2>
+                          </div>
+
+                          <div className=' h-fit w-full font-Montserrat cursor-default font-medium xl:text-[1em] 2xl:text-[1em] text-[14px] flex flex-row flex-wrap gap-1'>
+                            
+                            <div className='bg-gray-700 w-fit py-2 px-4 rounded-full flex justify-between items-center leading-none hover:scale-110 duration-300'>
+                              <h1 className='text-cred leading-none text-[14px] xl:text-[1em] 2xl:text-[1em]'>React</h1>
+                            </div>
+
+                            <div className='bg-gray-700 w-fit py-2 px-4 rounded-full flex justify-between items-center leading-none hover:scale-110 duration-300'>
+                              <h1 className='text-cred leading-none text-[14px] xl:text-[1em] 2xl:text-[1em]'>TailwindCSS</h1>
+                            </div>
+
+                            <div className='bg-gray-700 w-fit py-2 px-4 rounded-full flex justify-between items-center leading-none hover:scale-110 duration-300'>
+                              <h1 className='text-cred leading-none text-[14px] xl:text-[1em] 2xl:text-[1em]'>Vite</h1>
+                            </div>
+
+                            <div className='bg-gray-700 w-fit py-2 px-4 rounded-full flex justify-between items-center leading-none hover:scale-110 duration-300'>
+                              <h1 className='text-cred leading-none text-[14px] xl:text-[1em] 2xl:text-[1em]'>Typescript</h1>
+                            </div>
+
+                            <div className='bg-gray-700 w-fit py-2 px-4 rounded-full flex justify-between items-center leading-none hover:scale-110 duration-300'>
+                              <h1 className='text-cred leading-none text-[14px] xl:text-[1em] 2xl:text-[1em]'>Framer</h1>
+                            </div>
+
+                          </div>
+
+                        </div>
                   </div>
+                 
 
               </div>
             </div>
