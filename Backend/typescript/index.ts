@@ -36,7 +36,7 @@ const EmailSender = async () => {
         from: `"TEST GMAIL" ${process.env.GMAIL_EMAIL}`, // sender address
         to: "mcbaque01@gmail.com", // list of receivers
         subject: "Test Messsage!", // Subject line
-        text: "Hello worldEST?", // plain text body
+        text: "Hello worldEST again?", // plain text body
 
       });
 
