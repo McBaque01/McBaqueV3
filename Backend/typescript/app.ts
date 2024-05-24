@@ -1,6 +1,6 @@
 import express, { Response, Request } from "express"; // nodejs framework
 import dotenv from "dotenv"
-import { EmailSender, replyTo } from "./nodemailer/nodemailer.js";
+import { replyTo } from "./nodemailer/nodemailer.js";
 
 
 

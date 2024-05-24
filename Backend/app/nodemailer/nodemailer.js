@@ -10,15 +10,6 @@ const transporter = nodemailer.createTransport({
         pass: process.env.GMAIL_PASSWORD,
     },
 });
-export const EmailSender = async () => {
-    const info = await transporter.sendMail({
-        from: `"TEST GMAIL" ${process.env.GMAIL_EMAIL}`, // sender address
-        to: "mcbaque01@gmail.com", // list of receivers
-        subject: "Test Messsage!", // Subject line
-        text: "Hello worldEST again?", // plain text body
-    });
-    console.log("Message sent: %s", info.messageId);
-};
 export const replyTo = async ({ name, email }) => {
     const info = await transporter.sendMail({
         from: `mcbaque01@gmail.com`, // sender address
