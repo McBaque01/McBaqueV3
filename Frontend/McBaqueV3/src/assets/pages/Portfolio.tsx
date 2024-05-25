@@ -9,7 +9,7 @@ export const Portfolio = () => {
 
       <About />
       <Skill />
-      <ContactUI/>
+      <ContactUI />
     </div>
   );
 };

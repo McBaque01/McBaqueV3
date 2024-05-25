@@ -3,7 +3,6 @@ import { Fade } from "../../framer-motion/Fade";
 import { FadeJr } from "../../framer-motion/FadeJr";
 import { MobileNavigation } from "./MobileNavigation";
 
-
 export const HeroContent = () => {
   return (
     <div className="relative flex h-full w-full flex-col justify-end gap-2 xl:justify-end xl:pt-5 2xl:justify-end 2xl:pt-5 ">
@@ -41,15 +40,14 @@ export const HeroContent = () => {
         <FadeJr>
           <Icon
             icon="mage:linkedin"
-            className="relative z-10 transition-all duration-500 hover:scale-125 xl:p-0 2xl:p-0 text-[3em] 2xl:text-[4em] xl:text-[4em]  text-cred"
+            className="relative z-10 text-[3em] text-cred transition-all duration-500 hover:scale-125 xl:p-0 xl:text-[4em] 2xl:p-0  2xl:text-[4em]"
           />
-          
         </FadeJr>
 
         <FadeJr>
           <Icon
             icon="jam:github"
-            className="relative z-10  transition-all duration-500  hover:scale-125 xl:p-0 2xl:p-0 text-[3em] 2xl:text-[4em] xl:text-[4em]  text-cred "
+            className="relative z-10  text-[3em] text-cred  transition-all duration-500 hover:scale-125 xl:p-0 xl:text-[4em] 2xl:p-0  2xl:text-[4em] "
           />
         </FadeJr>
       </Fade>
