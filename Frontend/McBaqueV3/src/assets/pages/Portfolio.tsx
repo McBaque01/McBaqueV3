@@ -6,7 +6,6 @@ export const Portfolio = () => {
   return (
     <div className="h-fit w-full overflow-hidden">
       <Hero />
-
       <About />
       <Skill />
       <ContactUI />
