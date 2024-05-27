@@ -15,8 +15,7 @@ export const ContactUI = () => {
           </p>
         </div>
 
-        <div className="flex h-fit w-full flex-row gap-2 py-6 justify-between">
-
+        <div className="flex h-fit w-full flex-row justify-between gap-2 py-6">
           <div className="flex h-fit w-[45%]  flex-col gap-4 py-2">
             <div className="flex h-fit w-full  flex-col gap-4 py-2 ">
               <div className=" py-2">
@@ -91,7 +90,7 @@ export const ContactUI = () => {
           </div>
 
           <div className="h-fit w-[45%]  py-5">
-            <ContactFormUI/>
+            <ContactFormUI />
           </div>
         </div>
       </div>
