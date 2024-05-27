@@ -1,5 +1,6 @@
 import React from "react";
 import { Icon } from "@iconify/react";
+import { ContactFormUI } from "./ContactFormUI";
 
 export const ContactUI = () => {
   return (
@@ -14,8 +15,9 @@ export const ContactUI = () => {
           </p>
         </div>
 
-        <div className="flex h-fit w-full flex-row gap-2 py-6">
-          <div className="flex h-fit w-[50%]  flex-col gap-4 py-2">
+        <div className="flex h-fit w-full flex-row gap-2 py-6 justify-between">
+
+          <div className="flex h-fit w-[45%]  flex-col gap-4 py-2">
             <div className="flex h-fit w-full  flex-col gap-4 py-2 ">
               <div className=" py-2">
                 <div className="flex flex-row items-center gap-4">
@@ -88,7 +90,9 @@ export const ContactUI = () => {
             </div>
           </div>
 
-          <div className="h-fit w-[50%] bg-slate-300 py-2"></div>
+          <div className="h-fit w-[45%]  py-5">
+            <ContactFormUI/>
+          </div>
         </div>
       </div>
     </div>
