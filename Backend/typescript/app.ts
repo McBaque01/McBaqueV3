@@ -27,6 +27,8 @@ dotenv.config()
 //     optionsSuccessStatus: 204,
 //   };
 
+// app.use(cors(corsOptions))
+
   interface corsvalues {
   origin: string[],
   methods:string[],
@@ -47,7 +49,7 @@ app.use(cors (<corsvalues>{
     res.status(200).json({message: "Sucess PortfolioTEst"});
   });
 
-// app.use(cors(corsOptions))
+
 
 // app.options('/PortfolioTest', (req: Request, res: Response) => {
 //     res.sendStatus(200);

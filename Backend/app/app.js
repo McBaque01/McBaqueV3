@@ -15,7 +15,6 @@ app.post('/PortfolioTest', async (req, res) => {
     console.log("HI, I Received something!");
     res.status(200).json({ message: "Sucess PortfolioTEst" });
 });
-// app.use(cors(corsOptions))
 // app.options('/PortfolioTest', (req: Request, res: Response) => {
 //     res.sendStatus(200);
 //   });

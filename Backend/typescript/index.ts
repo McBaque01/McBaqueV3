@@ -3,6 +3,7 @@ import app from './app.js';
 const port: number = 8080;
 
 const server = app.listen(port, () => {
+  console.log(`Server is Working!`);
   console.log(`Server running at http://localhost:${port}`);
 });
 

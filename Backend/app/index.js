@@ -1,6 +1,7 @@
 import app from './app.js';
 const port = 8080;
 const server = app.listen(port, () => {
+    console.log(`Server is Working!`);
     console.log(`Server running at http://localhost:${port}`);
 });
 // Error handling for server setup

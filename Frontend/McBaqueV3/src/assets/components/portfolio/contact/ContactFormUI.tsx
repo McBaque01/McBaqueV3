@@ -27,19 +27,6 @@ export const ContactFormUI = () => {
  
   const BackendAPI = import.meta.env.REACT_APP_BACKEND_ROUTE
 
-//   const data = {
-//     name: "Mark",
-//     email: "Baque",
-//     message: "Hi"
-// }
-//   const testRequest = async () =>{
-//     try {
-//       const response = await axios.post('http://localhost:8080/TestRequest', data);
-//       console.log(response)
-//     }catch (error) {
-//       console.log(error)
-//     } 
-//   }
 
   
 
@@ -50,18 +37,12 @@ export const ContactFormUI = () => {
     console.log(`${BackendAPI}/Portfolio/testRequest`)
     console.log(`http://localhost:8080/Portfolio/testRequest`)
     try {
-        const response = await axios.post(`http://localhost:8080/PortfolioTest`, data);
+        const response = await axios.post(`${BackendAPI}/PortfolioTest`, data);
         console.log(response)
       }catch (error) {
         console.log(error)
       } 
 
-      // try {
-      //   const response = await axios.post(`http://localhost:8080/TestRequest`, data);
-      //   console.log(response)
-      // }catch (error) {
-      //   console.log(error)
-      // } 
     
   };
 
@@ -161,12 +142,7 @@ export const ContactFormUI = () => {
           Send Message
         </button>
 
-        {/* <button
-          onClick={testRequest}
-          className=" w-full bg-clightbrown py-4 font-Montserrat text-[1em] font-bold tracking-widest text-cred"
-        >
-          test Message
-        </button> */}
+      
       </form>
     </>
   );
