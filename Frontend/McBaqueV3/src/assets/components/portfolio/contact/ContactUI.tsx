@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Icon } from "@iconify/react";
 import { ContactFormUI } from "./ContactFormUI";
 
@@ -31,7 +31,7 @@ export const ContactUI = () => {
                     <h1 className=" font-Montserrat text-[1em] 2xl:text-[1.2em] xl:text-[1.2em] font-bold  text-cred">
                       Address
                     </h1>
-                    <p className=" font-Montserrat text-[0.9em] 2xl:text-[1.2em] xl:text-[1.2em] font-medium  tracking-widest  text-clightbrown">
+                    <p className=" font-Montserrat text-[0.9em] 2xl:text-[1em] xl:text-[1em] font-medium  tracking-widest  text-clightbrown">
                       Rodriguez, Rizal, Philippines
                     </p>
                   </div>
@@ -50,7 +50,7 @@ export const ContactUI = () => {
                     <h1 className=" font-Montserrat text-[1em] xl:text-[1.2em] 2xl:text-[1.2em] font-bold  text-cred">
                       Email Me
                     </h1>
-                    <p className=" font-Montserrat text-[0.9em] font-medium tracking-widest text-clightbrown  underline">
+                    <p className=" font-Montserrat text-[0.9em] xl:text-[1em] 2xl:text-[1em] font-medium tracking-widest text-clightbrown  underline">
                       mcbaque01@gmail.com
                     </p>
                   </div>
