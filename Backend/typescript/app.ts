@@ -1,13 +1,59 @@
 import express from "express"; // nodejs framework
 import dotenv from "dotenv"
 import { replyTo } from "./nodemailer/nodemailer.js";
-
-
+import userRoutes from "./routes/userRoutes.js"
+import cors from "cors"
+import { Request, Response } from "express";
 
 const app = express();
+app.use(express.json());
 dotenv.config()
 
-app.use(express.json());
+
+// interface corsvalues {
+//     origin: string[],
+//     methods:string[],
+//     credentials: boolean,
+//     allowedHeaders: string[],
+//     optionsSuccessStatus: number,
+// }
+
+// const corsOptions: corsvalues = {
+    
+//     origin: ["http://localhost:5173"],
+//     methods: ["POST", "GET"],
+//     credentials: true,
+//     allowedHeaders: ['Content-Type', 'Authorization'],
+//     optionsSuccessStatus: 204,
+//   };
+
+  interface corsvalues {
+  origin: string[],
+  methods:string[],
+  credentials: boolean,
+  optionsSuccessStatus: number,
+}
+
+app.use(cors (<corsvalues>{
+  origin: ["http://localhost:5173"],
+  methods: ["POST", "GET"],
+  credentials: true,
+  optionsSuccessStatus: 204,
+}))
+
+
+  app.post('/PortfolioTest', async (req: Request, res: Response) => {
+    console.log("HI, I Received something!")
+    res.status(200).json({message: "Sucess PortfolioTEst"});
+  });
+
+// app.use(cors(corsOptions))
+
+// app.options('/PortfolioTest', (req: Request, res: Response) => {
+//     res.sendStatus(200);
+//   });
+app.use('/Portfolio', userRoutes)
+console.log("APP is Working!")
 
 // const name = "Mark John";
 // const email = "mcbaque01@gmail.com";

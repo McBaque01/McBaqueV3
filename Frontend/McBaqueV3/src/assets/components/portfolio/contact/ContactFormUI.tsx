@@ -2,6 +2,9 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import axios from "axios";
+
+axios.defaults.withCredentials = true;
 
 const userSchema = z.object({
   name: z
@@ -20,6 +23,51 @@ const userSchema = z.object({
 type userSchemaType = z.infer<typeof userSchema>;
 
 export const ContactFormUI = () => {
+
+ 
+  const BackendAPI = import.meta.env.REACT_APP_BACKEND_ROUTE
+
+//   const data = {
+//     name: "Mark",
+//     email: "Baque",
+//     message: "Hi"
+// }
+//   const testRequest = async () =>{
+//     try {
+//       const response = await axios.post('http://localhost:8080/TestRequest', data);
+//       console.log(response)
+//     }catch (error) {
+//       console.log(error)
+//     } 
+//   }
+
+  
+
+  const onSubmit: SubmitHandler<userSchemaType> = async (data) => {
+
+    console.log(data);
+
+    console.log(`${BackendAPI}/Portfolio/testRequest`)
+    console.log(`http://localhost:8080/Portfolio/testRequest`)
+    try {
+        const response = await axios.post(`http://localhost:8080/PortfolioTest`, data);
+        console.log(response)
+      }catch (error) {
+        console.log(error)
+      } 
+
+      // try {
+      //   const response = await axios.post(`http://localhost:8080/TestRequest`, data);
+      //   console.log(response)
+      // }catch (error) {
+      //   console.log(error)
+      // } 
+    
+  };
+
+
+
+
   const {
     register,
     handleSubmit,
@@ -28,10 +76,7 @@ export const ContactFormUI = () => {
     resolver: zodResolver(userSchema),
   });
 
-  const onSubmit: SubmitHandler<userSchemaType> = (data) => {
-    console.log(data); // Submit validated form data
-    // Handle form submission logic here (e.g., send to server)
-  };
+  
 
   console.log(isValid);
 
@@ -115,6 +160,13 @@ export const ContactFormUI = () => {
         >
           Send Message
         </button>
+
+        {/* <button
+          onClick={testRequest}
+          className=" w-full bg-clightbrown py-4 font-Montserrat text-[1em] font-bold tracking-widest text-cred"
+        >
+          test Message
+        </button> */}
       </form>
     </>
   );
