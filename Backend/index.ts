@@ -1,4 +1,4 @@
-import app from './app.js';
+import app from './typescript/app.js';
 
 const port: number = 8080;
 
