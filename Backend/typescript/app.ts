@@ -1,4 +1,4 @@
-import express, { Response, Request } from "express"; // nodejs framework
+import express from "express"; // nodejs framework
 import dotenv from "dotenv"
 import { replyTo } from "./nodemailer/nodemailer.js";
 
@@ -9,10 +9,10 @@ dotenv.config()
 
 app.use(express.json());
 
-const name = "Mark John";
-const email = "mcbaque01@gmail.com";
+// const name = "Mark John";
+// const email = "mcbaque01@gmail.com";
 
-replyTo({name, email})
+// replyTo({name, email})
 
 // EmailSender();
 
