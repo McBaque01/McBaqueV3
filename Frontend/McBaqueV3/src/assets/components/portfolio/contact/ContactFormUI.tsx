@@ -37,12 +37,12 @@ export const ContactFormUI = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="flex flex-col gap-2">
+      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-2">
+        <div className="flex flex-col gap-4">
           <div className=" flex h-fit w-full flex-col">
             <label
               htmlFor="name"
-              className="font-Montserrat text-[1.2em] font-bold text-cred"
+              className="font-Montserrat text-[1em] xl:text-[1.2em] 2xl:text-[1.2em] font-bold text-clightbrown"
             >
               Name
             </label>
@@ -52,7 +52,7 @@ export const ContactFormUI = () => {
                 type="text"
                 placeholder="BINI Aiah"
                 {...register("name")}
-                className="w-full border-none bg-[#FBFBFB] p-4 font-Montserrat font-bold tracking-widest text-cblue focus:border-none focus:outline-none"
+                className="w-full border-none bg-[#d1d1d1] p-4 font-Montserrat font-bold tracking-widest text-cblue focus:border-none focus:outline-none caret-cred"
               />
               {errors.name && (
                 <p className=" w-full px-2 py-1 text-center font-bold tracking-widest text-red-500">
@@ -65,7 +65,7 @@ export const ContactFormUI = () => {
           <div className=" flex h-fit w-full flex-col">
             <label
               htmlFor="email"
-              className="font-Montserrat text-[1.2em] font-bold text-cred"
+              className="font-Montserrat text-[1em] xl:text-[1.2em] 2xl:text-[1.2em] font-bold text-clightbrown"
             >
               Email
             </label>
@@ -75,7 +75,7 @@ export const ContactFormUI = () => {
                 type="text"
                 placeholder="@example.com"
                 {...register("email")}
-                className="w-full border-none bg-[#FBFBFB] p-4 font-Montserrat font-bold tracking-widest text-cblue focus:border-none focus:outline-none"
+                className="w-full border-none bg-[#d1d1d1] p-4 font-Montserrat font-bold tracking-widest text-cblue focus:border-none focus:outline-none caret-cred"
               />
               {errors.email && (
                 <p className=" w-full px-2 py-1 text-center font-bold tracking-widest text-red-500">
@@ -88,7 +88,7 @@ export const ContactFormUI = () => {
           <div className=" flex h-fit w-full flex-col">
             <label
               htmlFor="messageInput"
-              className="font-Montserrat text-[1.2em] font-bold text-cred"
+              className="font-Montserrat text-[1em] xl:text-[1.2em] 2xl:text-[1.2em] font-bold text-clightbrown"
             >
               Message
             </label>
@@ -98,7 +98,7 @@ export const ContactFormUI = () => {
                 id="messageInput"
                 placeholder="Just say Hi!"
                 {...register("messageInput")}
-                className="w-full break-words border-none bg-[#FBFBFB] p-4 font-Montserrat font-bold tracking-widest text-cblue focus:border-none focus:outline-none"
+                className="w-full break-words border-none bg-[#d1d1d1] p-4 font-Montserrat font-bold tracking-widest text-cblue focus:border-none focus:outline-none caret-cred"
               />
 
               {errors.messageInput && (
@@ -111,7 +111,7 @@ export const ContactFormUI = () => {
         </div>
         <button
           type="submit"
-          className=" w-full bg-clightbrown py-4 font-Montserrat text-[1.2em] font-semibold tracking-widest text-cred"
+          className=" w-full bg-clightbrown py-4 font-Montserrat text-[1em] font-bold tracking-widest text-cred"
         >
           Send Message
         </button>
