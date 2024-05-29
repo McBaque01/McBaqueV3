@@ -1,13 +1,14 @@
 import express from "express"; // nodejs framework
-import dotenv from "dotenv"
+
 import { replyTo } from "./nodemailer/nodemailer.js";
 import userRoutes from "./routes/userRoutes.js"
+import mailerRoutes from "./routes/mailerRoutes.js"
 import cors from "cors"
 import { Request, Response } from "express";
 
 const app = express();
 app.use(express.json());
-dotenv.config()
+
 
 
 // interface corsvalues {
@@ -54,7 +55,8 @@ app.use(cors (<corsvalues>{
 // app.options('/PortfolioTest', (req: Request, res: Response) => {
 //     res.sendStatus(200);
 //   });
-app.use('/Portfolio', userRoutes)
+app.use('/Send', userRoutes)
+app.use('/Mailer', mailerRoutes)
 console.log("APP is Working!")
 
 // const name = "Mark John";

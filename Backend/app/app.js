@@ -1,10 +1,9 @@
 import express from "express"; // nodejs framework
-import dotenv from "dotenv";
 import userRoutes from "./routes/userRoutes.js";
+import mailerRoutes from "./routes/mailerRoutes.js";
 import cors from "cors";
 const app = express();
 app.use(express.json());
-dotenv.config();
 app.use(cors({
     origin: ["http://localhost:5173", "https://mcbaquev3.vercel.app"],
     methods: ["POST", "GET"],
@@ -18,7 +17,8 @@ app.post('/PortfolioTest', async (req, res) => {
 // app.options('/PortfolioTest', (req: Request, res: Response) => {
 //     res.sendStatus(200);
 //   });
-app.use('/Portfolio', userRoutes);
+app.use('/Send', userRoutes);
+app.use('/Mailer', mailerRoutes);
 console.log("APP is Working!");
 // const name = "Mark John";
 // const email = "mcbaque01@gmail.com";

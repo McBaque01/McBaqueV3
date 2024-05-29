@@ -1,13 +1,30 @@
 import app from './app.js';
-const port = 8080;
-const server = app.listen(port, () => {
-    console.log(`Server is Working!`);
-    console.log(`Server running at http://localhost:${port}`);
+import { ConnectMongo } from './config/mongoDb.js';
+import { env } from './config/env.js';
+import dotenv from "dotenv";
+dotenv.config();
+// const port: number = 8080;
+ConnectMongo().then(() => {
+    const server = app.listen(env.port, () => {
+        console.log(`Server is Working!`);
+        console.log(`Server running at http://localhost:${env.port}`);
+    });
+    // Error handling for server setup
+    server.on('error', (err) => {
+        console.error('Server error:', err);
+    });
+}).catch(error => {
+    console.error('Failed to connect to the database:', error);
+    process.exit(1); // Exit the process with failure
 });
-// Error handling for server setup
-server.on('error', (err) => {
-    console.error('Server error:', err);
-});
+// const server = app.listen(port, () => {
+//   console.log(`Server is Working!`);
+//   console.log(`Server running at http://localhost:${port}`);
+// });
+// // Error handling for server setup
+// server.on('error', (err) => {
+//   console.error('Server error:', err);
+// });
 // import express, { Response, Request } from "express"; // nodejs framework
 // import cors from "cors";
 // import dotenv from 'dotenv';
