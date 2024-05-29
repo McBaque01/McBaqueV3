@@ -52,9 +52,7 @@ app.use(cors (<corsvalues>{
 
 
 
-// app.options('/PortfolioTest', (req: Request, res: Response) => {
-//     res.sendStatus(200);
-//   });
+
 app.use('/Send', userRoutes)
 app.use('/Mailer', mailerRoutes)
 console.log("APP is Working!")

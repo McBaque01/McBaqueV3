@@ -44,7 +44,7 @@ export const ContactFormUI = () => {
     //   } 
 
       try {
-        const response = await axios.post(`${BackendRoute}/Portfolio/testRequest`, data);
+        const response = await axios.post(`${BackendRoute}/Mailer/Send`, data);
         console.log(response)
       }catch (error) {
         console.log(error)
