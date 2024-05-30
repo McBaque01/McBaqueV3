@@ -27,7 +27,6 @@ export const Skill = () => {
       iconpath: "devicon:react",
     });
   }, []);
-  console.log(currSkill?.iconpath);
 
   return (
     <div
