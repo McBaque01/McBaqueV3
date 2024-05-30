@@ -7,7 +7,7 @@ export const ContactUI = () => {
     <div id="Contact" className="flex h-fit w-full justify-center bg-cblue">
 
       <Helmet>
-        <title>Mc Baque - Contact</title>
+       
         <meta name="description" content="Explore Mc Baque contact information page present his contacts." />
         <meta name="keywords" content="Mc Baque Contact,Mark John Baque Contact, McBaqueV3 Contact" />
         <meta name="author" content="Mark John Baque, Mc Baque" />
