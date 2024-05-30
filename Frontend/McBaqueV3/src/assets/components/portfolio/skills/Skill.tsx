@@ -187,18 +187,18 @@ export const Skill = () => {
                           
                           '
                 >
-                  <h1 className="px-3">Ongoing</h1>
+                  <h1 className="px-3 text-[1em]">Ongoing</h1>
                 </div>
 
                 <div className=" h-fit w-full cursor-default font-Montserrat text-[14px] xl:text-[1em] 2xl:text-[1em]">
-                  <h1 className="font-semibold leading-none text-cred">Name</h1>
+                  <h1 className="font-semibold leading-none text-cred text-[1em]">Name</h1>
                   <h2 className=" leading-2 font-medium text-slate-500">
                     VALO-API
                   </h2>
                 </div>
 
                 <div className=" h-fit w-full cursor-default font-Montserrat text-[14px] xl:text-[1em] 2xl:text-[1em]">
-                  <h1 className="font-semibold leading-none text-cred ">
+                  <h1 className="font-semibold leading-none text-cred text-[1em]">
                     Domain
                   </h1>
                   <h2
@@ -214,7 +214,7 @@ export const Skill = () => {
                 </div>
 
                 <div className=" h-fit w-full cursor-default font-Montserrat text-[14px] xl:text-[1em] 2xl:text-[1em]">
-                  <h1 className="font-semibold leading-none text-cred">
+                  <h1 className="font-semibold leading-none text-cred text-[1em]">
                     Description
                   </h1>
                   <h2 className=" leading-2 font-medium text-slate-500">
@@ -267,18 +267,18 @@ export const Skill = () => {
                           
                           '
                 >
-                  <h1 className="px-3">Done</h1>
+                  <h1 className="px-3 text-[1em]">Done</h1>
                 </div>
 
                 <div className=" h-fit w-full cursor-default font-Montserrat text-[14px] xl:text-[1em] 2xl:text-[1em]">
-                  <h1 className="font-semibold leading-none text-cred">Name</h1>
+                  <h1 className="font-semibold leading-none text-cred text-[1em]">Name</h1>
                   <h2 className=" leading-2 font-medium text-slate-500">
                     LIGHT N SEEK
                   </h2>
                 </div>
 
                 <div className=" h-fit w-full cursor-default font-Montserrat text-[14px] xl:text-[1em] 2xl:text-[1em]">
-                  <h1 className="font-semibold leading-none text-cred ">
+                  <h1 className="font-semibold leading-none text-cred text-[1em]">
                     Domain
                   </h1>
                   <h2
@@ -294,7 +294,7 @@ export const Skill = () => {
                 </div>
 
                 <div className=" h-fit w-full cursor-default font-Montserrat text-[14px] xl:text-[1em] 2xl:text-[1em]">
-                  <h1 className="font-semibold leading-none text-cred">
+                  <h1 className="font-semibold leading-none text-cred text-[1em]">
                     Description
                   </h1>
                   <h2 className=" leading-2 font-medium text-slate-500">
@@ -348,18 +348,18 @@ export const Skill = () => {
                           
                           '
                 >
-                  <h1 className="px-3">Done</h1>
+                  <h1 className="px-3 text-[1em]">Done</h1>
                 </div>
 
                 <div className=" h-fit w-full cursor-default font-Montserrat text-[14px] xl:text-[1em] 2xl:text-[1em]">
-                  <h1 className="font-semibold leading-none text-cred">Name</h1>
+                  <h1 className="font-semibold leading-none text-cred text-[1em]">Name</h1>
                   <h2 className=" leading-2 font-medium text-slate-500">
                     PERSONAL PORTFOLIO
                   </h2>
                 </div>
 
                 <div className=" h-fit w-full cursor-default font-Montserrat text-[14px] xl:text-[1em] 2xl:text-[1em]">
-                  <h1 className="font-semibold leading-none text-cred ">
+                  <h1 className="font-semibold leading-none text-cred text-[1em] ">
                     Domain
                   </h1>
                   <h2
@@ -375,7 +375,7 @@ export const Skill = () => {
                 </div>
 
                 <div className=" h-fit w-full cursor-default font-Montserrat text-[14px] xl:text-[1em] 2xl:text-[1em]">
-                  <h1 className="font-semibold leading-none text-cred">
+                  <h1 className="font-semibold leading-none text-cred text-[1em]">
                     Description
                   </h1>
                   <h2 className=" leading-2 font-medium text-slate-500">

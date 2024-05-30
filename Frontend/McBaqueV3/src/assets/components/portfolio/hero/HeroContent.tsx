@@ -27,9 +27,9 @@ export const HeroContent = () => {
           <p className="relative z-10 w-full font-Montserrat text-[12px] font-normal tracking-widest text-clightbrown transition-all duration-1000 xl:w-[80%] xl:text-[1em] 2xl:w-[80%] 2xl:text-[1.2em]">
             Passionate Web Developer creating innovative and user-friendly web
             applications. 
-            {/* Expertise in front-end and back-end development with a
+            Expertise in front-end and back-end development with a
             keen eye for detail and performance. Committed to delivering
-            seamless digital experiences. */}
+            seamless digital experiences.
           </p>
         </FadeJr>
       </Fade>

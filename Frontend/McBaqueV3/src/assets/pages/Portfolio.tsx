@@ -28,7 +28,7 @@ export const Portfolio = () => {
         <meta name="description" content="Explore Mc Baque portfolio showcasing his expertise in React, Node.js, and MongoDB." />
         <meta name="keywords" content="Mc Baque,Mark John Baque,Mc Baque Portfolio,Mark John Baque Portfolio, McBaqueV3" />
         <meta name="author" content="Mark John Baque, Mc Baque" />
-        <link rel="canonical" href="https://mcbaquev3.vercel.app" />
+      
       </Helmet>
       
       {/* Script tag for structured data */}
