@@ -1,10 +1,18 @@
 
 import { Icon } from "@iconify/react";
 import { ContactFormUI } from "./ContactFormUI";
-
+import { Helmet } from "react-helmet";
 export const ContactUI = () => {
   return (
     <div id="Contact" className="flex h-fit w-full justify-center bg-cblue">
+
+      <Helmet>
+        <title>Mc Baque - Contact</title>
+        <meta name="description" content="Explore Mc Baque contact information page present his contacts." />
+        <meta name="keywords" content="Mc Baque Contact,Mark John Baque Contact, McBaqueV3 Contact" />
+        <meta name="author" content="Mark John Baque, Mc Baque" />
+      
+      </Helmet>
       <div className="flex min-h-screen w-[80%] flex-col gap-2 py-5">
         <div className="h-fit w-full  text-center">
           <h1 className="font-Montserrat xl:text-[3.6em] 2xl:text-[3.6em] font-black text-[2.4em] text-cred">

@@ -6,6 +6,8 @@ import handleRedirectToURL from "../../../utils/handleRedirectToURL";
 import LightNSeek from "../../../media/image/LightNSeek.png";
 import PortfolioV3 from "../../../media/image/PortfolioV3.png";
 
+import { Helmet } from "react-helmet";
+
 export interface skilltype {
   name: string;
   iconpath: string;
@@ -33,6 +35,14 @@ export const Skill = () => {
       id="Skill"
       className="relative flex h-fit w-full flex-col items-center bg-cblue"
     >
+
+    <Helmet>
+        <title>Mc Baque - Skills</title>
+        <meta name="description" content="Explore Mc Baque Skill page showcasing his techstack." />
+        <meta name="keywords" content="Mc Baque Tech Stack, Mark John Baque Tech Stack, McBaqueV3 Tech Stack, Tech stack, Skills" />
+        <meta name="author" content="Mark John Baque, Mc Baque" />
+      
+      </Helmet>
       <div className="absolute top-[7em] flex w-full justify-center 2xl:top-[6em] ">
         <div>
           <InlineIcon

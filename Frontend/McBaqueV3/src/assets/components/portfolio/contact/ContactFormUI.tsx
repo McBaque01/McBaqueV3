@@ -28,20 +28,8 @@ export const ContactFormUI = () => {
   const BackendRoute: string = import.meta.env.REACT_APP_BACKEND_ROUTE
 
 
-  console.log(BackendRoute)
-
+  
   const onSubmit: SubmitHandler<userSchemaType> = async (data) => {
-
-    console.log(data);
-
-    // console.log(`${BackendRoute}/Portfolio/testRequest`)
-    // console.log(`http://localhost:8080/Portfolio/testRequest`)
-    // try {
-    //     const response = await axios.post(`${BackendAPI}/PortfolioTest`, data);
-    //     console.log(response)
-    //   }catch (error) {
-    //     console.log(error)
-    //   } 
 
       try {
         const response = await axios.post(`${BackendRoute}/Mailer/Send`, data);
@@ -52,8 +40,6 @@ export const ContactFormUI = () => {
 
     
   };
-
-
 
 
   const {
