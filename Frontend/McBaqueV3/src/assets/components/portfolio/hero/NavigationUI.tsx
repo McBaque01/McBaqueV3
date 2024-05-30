@@ -7,6 +7,7 @@ import { FadeSVG } from "../../framer-motion/FadeSVG";
 import { Navlink } from "./Navlink";
 
 export const NavigationUI = () => {
+  const HeroLink = "Hero";
   const navigationContent = ["About", "Skill", "Contact"];
 
   return (
@@ -32,7 +33,7 @@ export const NavigationUI = () => {
 
       <div className="flex h-fit w-[4em] flex-none transition-all hover:scale-110">
         <Fade className="h-full w-full cursor-pointer">
-          <Navlink Linkto="Hero">
+          <Navlink Linkto={HeroLink}>
             <FadeSVG
               ImagePath={McLogo}
               classname="w-full h-full"
