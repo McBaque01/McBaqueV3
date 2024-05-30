@@ -15,6 +15,7 @@ export const Navlink = ({ children, Linkto, classname }: NavlinkType) => {
       smooth={true}
       duration={1000}
       className={classname}
+      href={Linkto}
     >
       {children}
     </ScrollLink>
