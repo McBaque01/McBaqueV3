@@ -6,6 +6,7 @@ import { FadeSVG } from "../../framer-motion/FadeSVG";
 
 import { Navlink } from "./Navlink";
 
+import { DownloadCV } from "../../../utils/download";
 export const NavigationUI = () => {
   const HeroLink = "Hero";
   const navigationContent = ["About", "Skill", "Contact"];
@@ -46,7 +47,7 @@ export const NavigationUI = () => {
         <Fade className="flex w-full justify-end sm:hidden md:hidden lg:hidden ">
           <FadeJr delay={1.2} direction="down">
             <div className="border-2 border-clightbrown px-6 py-2 font-Montserrat capitalize text-clightbrown transition-all duration-500 hover:scale-110 hover:border-cred">
-              <button className=" h-full w-full text-[16px] font-black uppercase tracking-widest">
+              <button className=" h-full w-full text-[16px] font-black uppercase tracking-widest" onClick={DownloadCV}>
                 Download CV
               </button>
             </div>

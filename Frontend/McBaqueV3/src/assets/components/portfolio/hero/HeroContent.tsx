@@ -2,6 +2,7 @@ import { Icon } from "@iconify/react";
 import { Fade } from "../../framer-motion/Fade";
 import { FadeJr } from "../../framer-motion/FadeJr";
 import { MobileNavigation } from "./MobileNavigation";
+import handleRedirectToURL from "../../../utils/handleRedirectToURL";
 
 export const HeroContent = () => {
   return (
@@ -42,6 +43,7 @@ export const HeroContent = () => {
           <Icon
             icon="mage:linkedin"
             className="relative z-10 text-[3em] text-cred transition-all duration-500 hover:scale-125 xl:p-0 xl:text-[4em] 2xl:p-0  2xl:text-[4em]"
+            onClick={() => handleRedirectToURL({ url: 'https://www.linkedin.com/in/mcbaque/' })}
           />
         </FadeJr>
 
@@ -49,6 +51,7 @@ export const HeroContent = () => {
           <Icon
             icon="jam:github"
             className="relative z-10  text-[3em] text-cred  transition-all duration-500 hover:scale-125 xl:p-0 xl:text-[4em] 2xl:p-0  2xl:text-[4em] "
+            onClick={() => handleRedirectToURL({ url: 'https://github.com/McBaque01' })}
           />
         </FadeJr>
       </Fade>
