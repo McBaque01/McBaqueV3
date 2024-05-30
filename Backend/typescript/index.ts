@@ -2,6 +2,7 @@ import { error } from 'console';
 import app from './app.js';
 import { ConnectMongo } from './config/mongoDb.js';
 import { env } from './config/env.js';
+import { AuthorizeMe } from './config/spotifyAPI.js';
 
 
 import dotenv from "dotenv"
@@ -10,9 +11,9 @@ dotenv.config()
 
 ConnectMongo().then(()=>{
 
-  const server = app.listen(env.port, () => {
+  const server = app.listen(env.Port, () => {
     console.log(`Server is Working!`);
-    console.log(`Server running at http://localhost:${env.port}`);
+    console.log(`Server running at ${env.Host}${env.Port}`);
   });
   
   
@@ -20,6 +21,7 @@ ConnectMongo().then(()=>{
   server.on('error', (err) => {
     console.error('Server error:', err);
   });
+
 
 
 }).catch(error =>{

@@ -1,2 +1,4 @@
 .env
-env.js
+
+app/config/env.js
+typescript/config/env.ts

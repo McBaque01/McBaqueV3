@@ -14,6 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@spotify/web-api-ts-sdk": "^1.2.0",
     "@types/nodemailer": "^6.4.15",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",

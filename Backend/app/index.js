@@ -5,9 +5,9 @@ import dotenv from "dotenv";
 dotenv.config();
 // const port: number = 8080;
 ConnectMongo().then(() => {
-    const server = app.listen(env.port, () => {
+    const server = app.listen(env.Port, () => {
         console.log(`Server is Working!`);
-        console.log(`Server running at http://localhost:${env.port}`);
+        console.log(`Server running at ${env.Host}${env.Port}`);
     });
     // Error handling for server setup
     server.on('error', (err) => {

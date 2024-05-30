@@ -1,13 +1,15 @@
 import express from "express"; // nodejs framework
 
-import { replyTo } from "./nodemailer/nodemailer.js";
 import userRoutes from "./routes/userRoutes.js"
 import mailerRoutes from "./routes/mailerRoutes.js"
 import cors from "cors"
 import { Request, Response } from "express";
 
+
 const app = express();
 app.use(express.json());
+
+
 
 
 
@@ -55,6 +57,7 @@ app.use(cors (<corsvalues>{
 
 app.use('/Send', userRoutes)
 app.use('/Mailer', mailerRoutes)
+
 console.log("APP is Working!")
 
 // const name = "Mark John";

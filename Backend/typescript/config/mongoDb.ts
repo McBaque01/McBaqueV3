@@ -1,7 +1,7 @@
 import mongoose, { Document, Schema, Model } from 'mongoose';
 import { Request, Response } from 'express';
 import { env } from './env.js';
-import { ClientRequest } from 'http';
+
 import { replyTo } from './nodemailer.js';
 
 
@@ -35,7 +35,7 @@ interface MessageResult extends Document {
 
 export const ConnectMongo = async () => {
     try {
-          await mongoose.connect(env.mongoURI, { dbName: "Portfolio" }); 
+          await mongoose.connect(env.MongoURI, { dbName: "Portfolio" }); 
           console.log('MongoDB connected');
     } catch (error) {
       console.error('Error connecting to MongoDB: Database', error);

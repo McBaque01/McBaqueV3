@@ -11,7 +11,7 @@ const ClientMessageSchema = new mongoose.Schema({
 });
 export const ConnectMongo = async () => {
     try {
-        await mongoose.connect(env.mongoURI, { dbName: "Portfolio" });
+        await mongoose.connect(env.MongoURI, { dbName: "Portfolio" });
         console.log('MongoDB connected');
     }
     catch (error) {
