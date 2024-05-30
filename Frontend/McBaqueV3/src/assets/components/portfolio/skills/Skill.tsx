@@ -37,7 +37,7 @@ export const Skill = () => {
     >
 
     <Helmet>
-        <title>Mc Baque - Skills</title>
+        
         <meta name="description" content="Explore Mc Baque Skill page showcasing his techstack." />
         <meta name="keywords" content="Mc Baque Tech Stack, Mark John Baque Tech Stack, McBaqueV3 Tech Stack, Tech stack, Skills" />
         <meta name="author" content="Mark John Baque, Mc Baque" />
