@@ -40,6 +40,7 @@ export const AuthorizeMe = async (req: Request, res: Response) =>{
         authorizationUrl.searchParams.set('scope', scope);
         authorizationUrl.searchParams.set('redirect_uri', redirectUri);
        
+        
         console.log(authorizationUrl.toString());
 
         res.json({authorizationUrl: authorizationUrl})
@@ -50,7 +51,7 @@ export const AuthorizeMe = async (req: Request, res: Response) =>{
     }
 }
 
-export const AuthorizeMeServer = async () => {
+export const AuthorizeMeServer = async (req: Request, res: Response) => {
   console.log("HERE SERVER")
   try{
     const sdk = SpotifyApi.withUserAuthorization(env.SpotifyClient, `http://localhost:3000`, ["user-read-playback-state"]);
@@ -60,7 +61,7 @@ export const AuthorizeMeServer = async () => {
     console.log("Auth Server")
    
   }catch(error){
-      console.error('The Error was:', error);
+    console.error('The Error was:', error);
     
   }
 

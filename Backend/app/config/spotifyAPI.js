@@ -33,7 +33,7 @@ export const AuthorizeMe = async (req, res) => {
         res.status(500).json("Spotify Authorize Bad");
     }
 };
-export const AuthorizeMeServer = async () => {
+export const AuthorizeMeServer = async (req, res) => {
     console.log("HERE SERVER");
     try {
         const sdk = SpotifyApi.withUserAuthorization(env.SpotifyClient, `http://localhost:3000`, ["user-read-playback-state"]);
