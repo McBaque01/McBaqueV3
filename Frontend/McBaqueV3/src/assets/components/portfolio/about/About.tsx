@@ -2,7 +2,7 @@ import { Cloud } from "./Cloud";
 import JapaneseWave from "../../../media/image/JapaneseWave.svg";
 import { Fade } from "../../framer-motion/Fade";
 import { FadeJr } from "../../framer-motion/FadeJr";
-import { Helmet } from "react-helmet";
+
 export const About = () => {
   return (
     <div
@@ -10,15 +10,7 @@ export const About = () => {
       className="relative flex h-fit w-full flex-col items-center justify-center overflow-hidden bg-clightbrown"
     >
 
-      <Helmet>
-        
-        <meta name="description" content="Explore Mc Baque personal information page showcasing his Experience." />
-        <meta name="keywords" content="Mc Baque Personal Information,Mark John Baque Personal Information, McBaqueV3 Personal Information" />
-        <meta name="author" content="Mark John Baque, Mc Baque" />
-      
-      </Helmet>
-
-
+     
       <div className="relative flex min-h-screen w-[80%] flex-col gap-2">
         <Cloud
           classname="w-fit h-fit absolute top-[5em] 2xl:left-[0em] xl:left-[16em] left-[90%] transition-all duration-1000"

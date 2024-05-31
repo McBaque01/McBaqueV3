@@ -2,7 +2,8 @@ import { About } from "../components/portfolio/about/About";
 import { Hero } from "../components/portfolio/hero/Hero";
 import { Skill } from "../components/portfolio/skills/Skill";
 import { ContactUI } from "../components/portfolio/contact/ContactUI";
-import { Helmet } from "react-helmet";
+
+import { SpotifyUI } from "../components/spotify/SpotifyUI";
 export const Portfolio = () => {
 
 
@@ -23,13 +24,13 @@ export const Portfolio = () => {
    
     <div className="h-fit w-full overflow-hidden">
 
-      <Helmet>
+      {/* <Helmet>
         <title>Mc Baque - Portfolio</title>
         <meta name="description" content="Explore Mc Baque portfolio showcasing his expertise in React, Node.js, and MongoDB." />
         <meta name="keywords" content="Mc Baque,Mark John Baque,Mc Baque Portfolio,Mark John Baque Portfolio, McBaqueV3" />
         <meta name="author" content="Mark John Baque, Mc Baque" />
       
-      </Helmet>
+      </Helmet> */}
       
       {/* Script tag for structured data */}
       <script type="application/ld+json">
@@ -42,6 +43,7 @@ export const Portfolio = () => {
       <About />
       <Skill />
       <ContactUI />
+      {/* <SpotifyUI/> */}
     </div>
   );
 };

@@ -2,6 +2,8 @@ import express from "express"; // nodejs framework
 
 import userRoutes from "./routes/userRoutes.js"
 import mailerRoutes from "./routes/mailerRoutes.js"
+import spotifyRoutes from "./routes/spotifyRoutes.js"
+
 import cors from "cors"
 import { Request, Response } from "express";
 
@@ -57,6 +59,7 @@ app.use(cors (<corsvalues>{
 
 app.use('/Send', userRoutes)
 app.use('/Mailer', mailerRoutes)
+app.use('/Spotify', spotifyRoutes)
 
 console.log("APP is Working!")
 

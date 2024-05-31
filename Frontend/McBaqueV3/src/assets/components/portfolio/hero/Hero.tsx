@@ -1,7 +1,7 @@
 import { Cloud } from "./Cloud";
 import { HeroContent } from "./HeroContent";
 import { NavigationUI } from "./NavigationUI";
-import { Helmet } from "react-helmet";
+
 
 export const Hero = () => {
   return (
@@ -10,13 +10,7 @@ export const Hero = () => {
       className="relative flex h-fit w-full justify-center bg-cblue"
     >
 
-      <Helmet>
-        <title>Mc Baque - Portfolio</title>
-        <meta name="description" content="Explore Mc Baque Portfolio." />
-        <meta name="keywords" content="Mc Baque Portfolio, Mark John Baque Portfolio, McBaqueV3 Portfolio" />
-        <meta name="author" content="Mark John Baque, Mc Baque" />
       
-      </Helmet>
       <div className="relative flex min-h-screen w-[80%] flex-col pb-[8em] xl:min-h-screen 2xl:min-h-screen">
         <NavigationUI />
         <HeroContent />

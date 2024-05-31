@@ -2,7 +2,7 @@ import { error } from 'console';
 import app from './app.js';
 import { ConnectMongo } from './config/mongoDb.js';
 import { env } from './config/env.js';
-import { AuthorizeMe } from './config/spotifyAPI.js';
+import { AuthorizeMeServer } from './config/spotifyAPI.js';
 
 
 import dotenv from "dotenv"
@@ -22,7 +22,7 @@ ConnectMongo().then(()=>{
     console.error('Server error:', err);
   });
 
-
+ 
 
 }).catch(error =>{
   console.error('Failed to connect to the database:', error);

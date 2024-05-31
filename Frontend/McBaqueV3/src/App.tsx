@@ -1,10 +1,11 @@
 import "./App.css";
 import { RouteHero } from "./assets/routes/RouteHero";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 function App() {
   return (
     <>
+    <HelmetProvider>
     <Helmet>
         <style>{`
           /* Your critical CSS goes here */
@@ -18,6 +19,7 @@ function App() {
         `}</style>
       </Helmet>
       <RouteHero />
+      </HelmetProvider>
     </>
   );
 }

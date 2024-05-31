@@ -6,6 +6,7 @@ export const env = {
     GmailEmail: process.env.GMAIL_EMAIL || "mcbaqueee@gmail.com",
     GmailPassword: process.env.GMAIL_PASSWORD || "rztepqnpitwsfoul",
     SpotifyClient: process.env.SpotifyClientID || "f8c5beb51d54443c98c0eb37b6887e68",
+    SpotifySecret: process.env.SpotifySecret || "69ce02fe97ce4177841c7705039d16c9",
   };
 
   
