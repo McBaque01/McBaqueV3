@@ -1,3 +1,4 @@
+import { SpotifyApi } from '@spotify/web-api-ts-sdk';
 import { env } from './env.js';
 import SpotifyWebApi from 'spotify-web-api-node';
 function generateRandomString(length) {
@@ -18,28 +19,32 @@ const spotifyApi = new SpotifyWebApi({
 export const AuthorizeMe = async (req, res) => {
     console.log("HERE");
     try {
-        // const sdk = SpotifyApi.withUserAuthorization(env.SpotifyClient, `http://localhost:5173`, ["user-read-playback-state"]);
+        // const sdk = SpotifyApi.withUserAuthorization(env.SpotifyClient, env.SpotifyCallbackURI, ["user-read-playback-state"]);
+        // const sdk = SpotifyApi.withClientCredentials(env.SpotifyClient, env.SpotifySecret, ["user-read-playback-state"]);
         // // const sdk = SpotifyApi.withClientCredentials(env.SpotifyClient, env.SpotifySecret, ["user-read-playback-state"]);
-        // console.log(sdk);
+        //  const user = await sdk.currentUser.profile();
+        //   console.log(sdk);
+        // const sdk = SpotifyApi.performUserAuthorization(env.SpotifyClient, env.SpotifyCallbackURI, ["user-read-playback-state"], "http://localhost:3000/Spotify/Accept-user-token");
+        res.redirect(`${SpotifyApi.performUserAuthorization(env.SpotifyClient, env.SpotifyCallbackURI, ["user-read-playback-state"], "http://localhost:3000/Spotify/Accept-user-token")}`);
         // const user = await sdk.currentUser.profile();
         // // Log the user profile
-        // console.log(user);
+        // res.send(user)
         // const serializedSdk = {
         //     accessToken: sdk.getAccessToken(),
         //     // Add other properties as needed
         // };
         // res.status(200).json({SDK: serializedSdk})
-        console.log("Auth Activate");
-        const scope = 'user-read-playback-state';
-        const client_id = env.SpotifyClient;
-        const redirectUri = env.SpotifyCallbackURI; // Replace with your actual redirect URI
-        const authorizationUrl = new URL('https://accounts.spotify.com/authorize');
-        authorizationUrl.searchParams.set('response_type', 'code');
-        authorizationUrl.searchParams.set('client_id', client_id);
-        authorizationUrl.searchParams.set('scope', scope);
-        authorizationUrl.searchParams.set('redirect_uri', redirectUri);
-        console.log(authorizationUrl.toString());
-        res.json({ authorizationUrl: authorizationUrl });
+        // console.log("Auth Activate")
+        // const scope = 'user-read-playback-state';
+        // const client_id = env.SpotifyClient;
+        // const redirectUri =  env.SpotifyCallbackURI; // Replace with your actual redirect URI
+        // const authorizationUrl = new URL('https://accounts.spotify.com/authorize');
+        // authorizationUrl.searchParams.set('response_type', 'code');
+        // authorizationUrl.searchParams.set('client_id', client_id);
+        // authorizationUrl.searchParams.set('scope', scope);
+        // authorizationUrl.searchParams.set('redirect_uri', redirectUri);
+        // console.log(authorizationUrl.toString());
+        // res.json({authorizationUrl: authorizationUrl})
     }
     catch (error) {
         console.error('The Error was:', error);
@@ -112,6 +117,11 @@ export const getMyCurrentPlayingMusic = (req, res) => {
     }, function (err) {
         console.log('Something went wrong!', err);
     });
+};
+export const acceptToken = (req, res) => {
+    let data = req.body;
+    const sdkdata = SpotifyApi.withAccessToken("client-id", data);
+    console.log("SDK", sdkdata);
 };
 // console.log("Callback Activate")
 // var code = req.query.code || null;
