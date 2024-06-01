@@ -1,3 +1,4 @@
+import { SpotifyApi } from "@spotify/web-api-ts-sdk";
 import dotenv from "dotenv"
 
 dotenv.config()
@@ -10,6 +11,7 @@ export const env = {
     GmailPassword: process.env.GMAIL_PASSWORD || "GMAIL_PASSWORD",
     SpotifyClient: process.env.SpotifyClientID || "SPOTIFY_CLIENT_ID",
     SpotifySecret: process.env.SpotifySecret || "SPOTIFY_SECRET",
+    SpotifyCallbackURI: process.env.CallbackURI || "SPOTIFY_CALLBACK",
   };
 
   

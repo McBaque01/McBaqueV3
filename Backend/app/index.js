@@ -4,13 +4,13 @@ import { env } from './config/env.js';
 import dotenv from "dotenv";
 dotenv.config();
 // const port: number = 8080;
-console.log(env.GmailEmail);
-console.log(env.GmailPassword);
-console.log(env.Host);
-console.log(env.MongoURI);
-console.log(env.Port);
-console.log(env.SpotifyClient);
-console.log(env.SpotifySecret);
+// console.log(env.GmailEmail)
+// console.log(env.GmailPassword)
+// console.log(env.Host)
+// console.log(env.MongoURI)
+// console.log(env.Port)
+// console.log(env.SpotifyClient)
+// console.log(env.SpotifySecret)
 ConnectMongo().then(() => {
     const server = app.listen(env.Port, () => {
         console.log(`Server is Working!`);
