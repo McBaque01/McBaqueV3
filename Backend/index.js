@@ -12,10 +12,10 @@ const startServer = async () => {
             console.log(`Server running at ${env.Host}${env.Port}`);
             const token = await refreshAccessTokenOnStartup();
             console.log(`Access token on startup: ${token}`);
-            setInterval(async () => {
-                const token = await refreshAccessTokenOnStartup();
-                console.log(`Access token on startup: ${token}`);
-            }, 180000);
+            // setInterval(async () => {
+            //   const token = await refreshAccessTokenOnStartup();
+            //   console.log(`Access token on startup: ${token}`);
+            // }, 180000);
         });
         server.on('error', (err) => {
             console.error('Server error:', err);

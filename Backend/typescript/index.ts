@@ -19,10 +19,10 @@ const startServer = async () => {
       const token = await refreshAccessTokenOnStartup();
       console.log(`Access token on startup: ${token}`);
       
-      setInterval(async () => {
-        const token = await refreshAccessTokenOnStartup();
-        console.log(`Access token on startup: ${token}`);
-      }, 180000);
+      // setInterval(async () => {
+      //   const token = await refreshAccessTokenOnStartup();
+      //   console.log(`Access token on startup: ${token}`);
+      // }, 180000);
   
     });
 

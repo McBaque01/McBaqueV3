@@ -15,6 +15,9 @@ app.post('/PortfolioTest', async (req, res) => {
     console.log("HI, I Received something!");
     res.status(200).json({ message: "Sucess PortfolioTEst" });
 });
+app.get('/MakeMeAlive', (req, res) => {
+    res.status(200).json({ message: 'Server is alive!' });
+});
 app.use('/Send', userRoutes);
 app.use('/Mailer', mailerRoutes);
 app.use('/Spotify', spotifyRoutes);

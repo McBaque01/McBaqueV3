@@ -54,7 +54,9 @@ app.use(cors (<corsvalues>{
     res.status(200).json({message: "Sucess PortfolioTEst"});
   });
 
-
+app.get('/MakeMeAlive', (req: Request, res: Response) =>{
+  res.status(200).json({ message: 'Server is alive!' });
+})
 
 
 app.use('/Send', userRoutes)
