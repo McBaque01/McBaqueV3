@@ -13,8 +13,6 @@ app.use(express.json());
 
 
 
-
-
 // interface corsvalues {
 //     origin: string[],
 //     methods:string[],

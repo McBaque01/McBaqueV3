@@ -13,7 +13,7 @@
       }
     ],
     "crons": [{
-      "path": "/app/cron",
+      "path": "/app/cron.js",
       "schedule": "2 * * * *"
     }]
 
