@@ -9,6 +9,7 @@ import axios from 'axios';
 
 
 let SpotifyRefreshToken: string;
+
 function generateRandomString(length: number): string {
   let text = '';
   const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -93,7 +94,6 @@ export const AuthorizeMeServer = async (req: Request, res: Response) => {
     const scopes = ['user-read-playback-state']
     const state = generateRandomString(16)
     res.redirect(spotifyApi.createAuthorizeURL(scopes, state));
-   
   }catch(error){
     console.error('The Error was:', error);
     
@@ -176,10 +176,8 @@ export const getMyCurrentPlayingMusic = (req: Request, res: Response) => {
 }
 
 export const acceptToken = (req: Request, res: Response) => {
-
   let data = req.body;
   const sdkdata = SpotifyApi.withAccessToken("client-id", data); 
-
   console.log("SDK", sdkdata)
 }
 
@@ -197,7 +195,6 @@ export const refreshAccessTokenOnStartup = async () => {
     return access_token;
   } catch (error) {
     console.error('Error refreshing access token on startup:', error);
-
     return;
   }
 };

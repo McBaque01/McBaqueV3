@@ -1,4 +1,4 @@
-import { error } from 'console';
+
 import app from './app/app.js';
 import { ConnectMongo } from './app/config/mongoDb.js';
 import { env } from './app/config/env.js';
@@ -16,9 +16,8 @@ const startServer = async () => {
       console.log(`Server is working!`);
       console.log(`Server running at ${env.Host}${env.Port}`);
 
-      const token = await refreshAccessTokenOnStartup();
-      console.log(`Access token on startup: ${token}`);
-      
+      // const token = await refreshAccessTokenOnStartup();
+      // console.log(`Access token on startup: ${token}`);
       // setInterval(async () => {
       //   const token = await refreshAccessTokenOnStartup();
       //   console.log(`Access token on startup: ${token}`);

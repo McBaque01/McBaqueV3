@@ -11,27 +11,6 @@ import { Request, Response } from "express";
 const app = express();
 app.use(express.json());
 
-
-
-// interface corsvalues {
-//     origin: string[],
-//     methods:string[],
-//     credentials: boolean,
-//     allowedHeaders: string[],
-//     optionsSuccessStatus: number,
-// }
-
-// const corsOptions: corsvalues = {
-    
-//     origin: ["http://localhost:5173"],
-//     methods: ["POST", "GET"],
-//     credentials: true,
-//     allowedHeaders: ['Content-Type', 'Authorization'],
-//     optionsSuccessStatus: 204,
-//   };
-
-// app.use(cors(corsOptions))
-
   interface corsvalues {
   origin: string[],
   methods:string[],
@@ -47,10 +26,10 @@ app.use(cors (<corsvalues>{
 }))
 
 
-  app.post('/PortfolioTest', async (req: Request, res: Response) => {
-    console.log("HI, I Received something!")
-    res.status(200).json({message: "Sucess PortfolioTEst"});
-  });
+app.post('/PortfolioTest', async (req: Request, res: Response) => {
+  console.log("HI, I Received something!")
+  res.status(200).json({message: "Sucess PortfolioTEst"});
+});
 
 app.get('/MakeMeAlive', (req: Request, res: Response) =>{
   res.status(200).json({ message: 'Server is alive!' });

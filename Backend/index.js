@@ -1,7 +1,6 @@
 import app from './app/app.js';
 import { ConnectMongo } from './app/config/mongoDb.js';
 import { env } from './app/config/env.js';
-import { refreshAccessTokenOnStartup } from './app/config/spotifyAPI.js';
 import dotenv from "dotenv";
 dotenv.config();
 const startServer = async () => {
@@ -10,8 +9,8 @@ const startServer = async () => {
         const server = app.listen(env.Port, async () => {
             console.log(`Server is working!`);
             console.log(`Server running at ${env.Host}${env.Port}`);
-            const token = await refreshAccessTokenOnStartup();
-            console.log(`Access token on startup: ${token}`);
+            // const token = await refreshAccessTokenOnStartup();
+            // console.log(`Access token on startup: ${token}`);
             // setInterval(async () => {
             //   const token = await refreshAccessTokenOnStartup();
             //   console.log(`Access token on startup: ${token}`);
