@@ -3,10 +3,53 @@ import app from './app/app.js';
 import { ConnectMongo } from './app/config/mongoDb.js';
 import { env } from './app/config/env.js';
 import { AuthorizeMeServer } from './app/config/spotifyAPI.js';
-
+import { refreshAccessTokenOnStartup } from './app/config/spotifyAPI.js';
 
 import dotenv from "dotenv"
 dotenv.config()
+
+
+
+
+
+const startServer = async () => {
+  try {
+    await ConnectMongo();
+    const server = app.listen(env.Port, async () => {
+      console.log(`Server is working!`);
+      console.log(`Server running at ${env.Host}${env.Port}`);
+
+      const token = await refreshAccessTokenOnStartup();
+      console.log(`Access token on startup: ${token}`);
+    });
+
+    server.on('error', (err) => {
+      console.error('Server error:', err);
+    });
+  } catch (error) {
+    console.error('Failed to connect to the database:', error);
+    process.exit(1); // Exit the process with failure
+  }
+};
+
+startServer();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // const port: number = 8080;
 
 // console.log(env.GmailEmail)
@@ -17,27 +60,31 @@ dotenv.config()
 // console.log(env.SpotifyClient)
 // console.log(env.SpotifySecret)
 
-ConnectMongo().then(()=>{
+// ConnectMongo().then(()=>{
 
-  const server = app.listen(env.Port, () => {
-    console.log(`Server is Working!`);
-    console.log(`Server running at ${env.Host}${env.Port}`);
-  });
+//   const server = app.listen(env.Port, async () => {
+//     console.log(`Server is Working!`);
+//     console.log(`Server running at ${env.Host}${env.Port}`);
+
+//     const token = await refreshAccessTokenOnStartup(); 
+
+//     console.log(token)
+//   });
   
  
 
-  // Error handling for server setup
-  server.on('error', (err) => {
-    console.error('Server error:', err);
-  });
+//   // Error handling for server setup
+//   server.on('error', (err) => {
+//     console.error('Server error:', err);
+//   });
 
  
 
-}).catch(error =>{
-  console.error('Failed to connect to the database:', error);
-  process.exit(1); // Exit the process with failure
+// }).catch(error =>{
+//   console.error('Failed to connect to the database:', error);
+//   process.exit(1); // Exit the process with failure
 
-})
+// })
 
 
 

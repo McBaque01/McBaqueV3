@@ -7,6 +7,8 @@ import SpotifyWebApi from 'spotify-web-api-node'
 
 import axios from 'axios';
 
+
+let SpotifyRefreshToken: string;
 function generateRandomString(length: number): string {
   let text = '';
   const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -88,7 +90,6 @@ export const AuthorizeMeServer = async (req: Request, res: Response) => {
   console.log(client_secret)
   console.log("HERE SERVER")
   try{
-   
     const scopes = ['user-read-playback-state']
     const state = generateRandomString(16)
     res.redirect(spotifyApi.createAuthorizeURL(scopes, state));
@@ -97,7 +98,6 @@ export const AuthorizeMeServer = async (req: Request, res: Response) => {
     console.error('The Error was:', error);
     
   }
-
 }
 
 
@@ -130,7 +130,7 @@ export const SpotifyCallBack = async (req: Request, res: Response) => {
       console.log(
         `Sucessfully retreived access token. Expires in ${expires_in} s.`
       );
-      res.send('Success! You can now close the window.');
+      res.status(200).json({message: true});
 
       setInterval(async () => {
           const data = await spotifyApi.refreshAccessToken();
@@ -181,6 +181,37 @@ export const acceptToken = (req: Request, res: Response) => {
 
   console.log("SDK", sdkdata)
 }
+
+export const refreshAccessTokenOnStartup = async () => {
+  if (!SpotifyRefreshToken) {
+    console.log('No refresh token available. Please authorize the application.');
+    return;
+  }
+  
+  try {
+    const data = await spotifyApi.refreshAccessToken();
+    const access_token = data.body['access_token'];
+    spotifyApi.setAccessToken(access_token);
+    console.log('Access token refreshed on server startup');
+
+    return access_token;
+  } catch (error) {
+    console.error('Error refreshing access token on startup:', error);
+
+    return;
+  }
+};
+
+// export const getCurrentMusic = () => {
+//   spotifyApi.getMyCurrentPlayingTrack()
+//   .then(function(data) {
+//     console.log(data)
+//     console.log('Now playing: ' + data.body.item?.name);
+//     res.send(data.body.item)
+//   }, function(err) {
+//     console.log('Something went wrong!', err);
+//   });
+// }
 
 
 

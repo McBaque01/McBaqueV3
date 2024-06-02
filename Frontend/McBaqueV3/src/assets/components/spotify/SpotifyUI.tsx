@@ -12,14 +12,9 @@ export const SpotifyUI = () => {
                 try {
                     console.log(`${BackendRoute}/Spotify/AuthorizeMe`)
                    // Assuming the response contains the URL
-                     const response = await axios.get(`${BackendRoute}/Spotify/AuthorizeMe`);
-                     const authorizationUrl = response.data.authorizationUrl;
-                     console.log(response);
-                     console.log(authorizationUrl)
-                     if(authorizationUrl){
-                        window.location.href = authorizationUrl;
-                     }
+                     const response = await axios.get(`${BackendRoute}/Spotify/CurrentMusic`);
                     
+                    console.log(response.data)
                    
                     
                 } catch (error) {

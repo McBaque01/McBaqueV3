@@ -3,7 +3,7 @@ import { Hero } from "../components/portfolio/hero/Hero";
 import { Skill } from "../components/portfolio/skills/Skill";
 import { ContactUI } from "../components/portfolio/contact/ContactUI";
 
-// import { SpotifyUI } from "../components/spotify/SpotifyUI";
+import { SpotifyUI } from "../components/spotify/SpotifyUI";
 export const Portfolio = () => {
 
 
@@ -43,7 +43,7 @@ export const Portfolio = () => {
       <About />
       <Skill />
       <ContactUI />
-      {/* <SpotifyUI/> */}
+      <SpotifyUI/>
     </div>
   );
 };

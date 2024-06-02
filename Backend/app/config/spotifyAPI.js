@@ -1,6 +1,7 @@
 import { SpotifyApi } from '@spotify/web-api-ts-sdk';
 import { env } from './env.js';
 import SpotifyWebApi from 'spotify-web-api-node';
+let SpotifyRefreshToken;
 function generateRandomString(length) {
     let text = '';
     const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -86,7 +87,7 @@ export const SpotifyCallBack = async (req, res) => {
         console.log('access_token:', access_token);
         console.log('refresh_token:', refresh_token);
         console.log(`Sucessfully retreived access token. Expires in ${expires_in} s.`);
-        res.send('Success! You can now close the window.');
+        res.status(200).json({ message: true });
         setInterval(async () => {
             const data = await spotifyApi.refreshAccessToken();
             const access_token = data.body['access_token'];
@@ -123,6 +124,33 @@ export const acceptToken = (req, res) => {
     const sdkdata = SpotifyApi.withAccessToken("client-id", data);
     console.log("SDK", sdkdata);
 };
+export const refreshAccessTokenOnStartup = async () => {
+    if (!SpotifyRefreshToken) {
+        console.log('No refresh token available. Please authorize the application.');
+        return;
+    }
+    try {
+        const data = await spotifyApi.refreshAccessToken();
+        const access_token = data.body['access_token'];
+        spotifyApi.setAccessToken(access_token);
+        console.log('Access token refreshed on server startup');
+        return access_token;
+    }
+    catch (error) {
+        console.error('Error refreshing access token on startup:', error);
+        return;
+    }
+};
+// export const getCurrentMusic = () => {
+//   spotifyApi.getMyCurrentPlayingTrack()
+//   .then(function(data) {
+//     console.log(data)
+//     console.log('Now playing: ' + data.body.item?.name);
+//     res.send(data.body.item)
+//   }, function(err) {
+//     console.log('Something went wrong!', err);
+//   });
+// }
 // console.log("Callback Activate")
 // var code = req.query.code || null;
 // var state = req.query.state || null;
