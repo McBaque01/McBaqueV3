@@ -9,9 +9,6 @@ import dotenv from "dotenv"
 dotenv.config()
 
 
-
-
-
 const startServer = async () => {
   try {
     await ConnectMongo();
@@ -21,6 +18,12 @@ const startServer = async () => {
 
       const token = await refreshAccessTokenOnStartup();
       console.log(`Access token on startup: ${token}`);
+      
+      setInterval(async () => {
+        const token = await refreshAccessTokenOnStartup();
+        console.log(`Access token on startup: ${token}`);
+      }, 180000);
+  
     });
 
     server.on('error', (err) => {

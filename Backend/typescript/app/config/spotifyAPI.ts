@@ -123,6 +123,7 @@ export const SpotifyCallBack = async (req: Request, res: Response) => {
       spotifyApi.setAccessToken(access_token);
       spotifyApi.setRefreshToken(refresh_token);
       
+      SpotifyRefreshToken = access_token;
 
       console.log('access_token:', access_token);
       console.log('refresh_token:', refresh_token);
@@ -187,7 +188,6 @@ export const refreshAccessTokenOnStartup = async () => {
     console.log('No refresh token available. Please authorize the application.');
     return;
   }
-  
   try {
     const data = await spotifyApi.refreshAccessToken();
     const access_token = data.body['access_token'];

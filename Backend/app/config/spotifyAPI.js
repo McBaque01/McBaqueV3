@@ -84,6 +84,7 @@ export const SpotifyCallBack = async (req, res) => {
         const expires_in = data.body['expires_in'];
         spotifyApi.setAccessToken(access_token);
         spotifyApi.setRefreshToken(refresh_token);
+        SpotifyRefreshToken = access_token;
         console.log('access_token:', access_token);
         console.log('refresh_token:', refresh_token);
         console.log(`Sucessfully retreived access token. Expires in ${expires_in} s.`);
