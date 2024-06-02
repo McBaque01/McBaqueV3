@@ -412,6 +412,13 @@ export const Skill = () => {
                       Framer
                     </h1>
                   </div>
+
+                  <div className="flex w-fit items-center justify-between rounded-full bg-gray-700 px-4 py-2 leading-none duration-300 hover:scale-110">
+                    <h1 className="text-[14px] leading-none text-cred xl:text-[1em] 2xl:text-[1em]">
+                      Spotify API
+                    </h1>
+                  </div>
+
                 </div>
               </div>
             </div>

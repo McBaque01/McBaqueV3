@@ -3,6 +3,7 @@ import { Fade } from "../../framer-motion/Fade";
 import { FadeJr } from "../../framer-motion/FadeJr";
 import { MobileNavigation } from "./MobileNavigation";
 import handleRedirectToURL from "../../../utils/handleRedirectToURL";
+import { DownloadCV } from "../../../utils/download";
 
 export const HeroContent = () => {
   return (
@@ -14,7 +15,7 @@ export const HeroContent = () => {
         delay={1.5}
       >
         <FadeJr classname=" ">
-          <h1 className="relative z-10 w-full font-Montserrat text-[3em] font-black leading-none text-clightbrown transition-all duration-1000 xl:text-[4.5em] 2xl:text-[5.8em]">
+          <h1 className="relative z-10 w-full font-Montserrat text-[3em] font-bold leading-none text-clightbrown transition-all duration-1000 xl:text-[4.5em] 2xl:text-[5.8em]">
             MARK JOHN BAQUE
           </h1>
         </FadeJr>
@@ -33,6 +34,17 @@ export const HeroContent = () => {
             seamless digital experiences.
           </p>
         </FadeJr>
+
+     
+          <FadeJr delay={1.2} direction="down" classname="xl:hidden 2xl:hidden relative z-10">
+            <div className="font-Montserrat capitalize text-cred transition-all duration-500 w-fit flex flex-row justify-center items-center gap-1 cursor-pointer">
+              <button className=" h-full w-fit text-[14px] font-Montserrat font-normal uppercase tracking-widest" onClick={DownloadCV}>
+                Download CV
+              </button>
+              <Icon icon="ci:external-link" className="text-[1em]" />
+            </div>
+          </FadeJr>
+      
       </Fade>
 
       <Fade
