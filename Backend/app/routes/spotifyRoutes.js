@@ -8,5 +8,7 @@ router.get("/Callback", SpotifyCallBack);
 router.get("/SpotifyServer", AuthorizeMeServer);
 router.get("/SpotifyToken", getMyTokens);
 router.get("/CurrentMusic", getMyCurrentPlayingMusic);
-router.get("/Refresh", SpotifyRefresh);
+router.get("/Refresh1", SpotifyRefresh);
+router.get("/Refresh2", SpotifyRefresh);
+router.get("/Refresh3", SpotifyRefresh);
 export default router;
