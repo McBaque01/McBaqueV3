@@ -43,6 +43,7 @@ export const SpotifyUI = () => {
                 <div className='  w-full 2xl:h-[8em] xl:h-[8em] h-[5em] max-w-[30em] flex flex-row justify-center items-center border-cred border-2 p-2 '>
                     <img
                         src={currMusic?.album.images[1].url}
+                        alt='Spotify Image'
                         className='h-full w-fit'
                     ></img>
                     <div className=' w-full h-full flex flex-col justify-center items-start p-2'>

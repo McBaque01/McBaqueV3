@@ -12,7 +12,7 @@ export const Cloud = ({ classname, direction, delay }: CloudPropsType) => {
   return (
     <div className={classname}>
       <Fade delay={3}>
-        <FadeSVG ImagePath={CloudSVG} direction={direction} delay={delay} />
+        <FadeSVG ImagePath={CloudSVG} direction={direction} delay={delay} classname="w-[10em] h-[10em]"/>
       </Fade>
     </div>
 

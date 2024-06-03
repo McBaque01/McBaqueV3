@@ -34,7 +34,7 @@ export const FadeSVG = ({
   };
 
   return (
-    <motion.svg variants={Fademotion} className={classname}>
+    <motion.svg variants={Fademotion} className={`${classname}`}>
       <title>
         Cloud
       </title>

@@ -15,16 +15,16 @@ export const Hero = () => {
         <NavigationUI />
         <HeroContent />
         <Cloud
-          classname="w-fit h-fit absolute top-[7em] 2xl:left-[16em] xl:left-[16em]  left-[90%] transition-all duration-1000"
+          classname="w-fit h-[2em] absolute top-[7em] 2xl:left-[16em] xl:left-[16em]  left-[90%] transition-all duration-1000"
           direction="left"
           delay={2}
         />
         <Cloud
-          classname="w-fit h-fit absolute  top-[36em] -right-[6em] xl:-right-[14em] 2xl:-right-[18em] transition-all duration-1000"
+          classname="w-fit h-fit absolute  top-[26em] -right-[6em] xl:-right-[1em] 2xl:-right-[1em] transition-all duration-1000"
           direction="left"
         />
         <Cloud
-          classname="w-fit h-fit absolute  bottom-[4em] -left-[10em] 2xl:-left-[14em] xl:-left-[14em] transition-all duration-1000"
+          classname="w-fit h-fit absolute  bottom-[4em] -left-[5em] 2xl:-left-[2em] xl:-left-[2em] transition-all duration-1000"
           direction="left"
           delay={3.2}
         />
