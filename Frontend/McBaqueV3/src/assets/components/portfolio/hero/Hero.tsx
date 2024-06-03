@@ -20,7 +20,7 @@ export const Hero = () => {
           delay={2}
         />
         <Cloud
-          classname="w-fit h-fit absolute  top-[30em] -right-[0em] xl:-right-[14em] 2xl:-right-[18em] transition-all duration-1000"
+          classname="w-fit h-fit absolute  top-[36em] -right-[6em] xl:-right-[14em] 2xl:-right-[18em] transition-all duration-1000"
           direction="left"
         />
         <Cloud

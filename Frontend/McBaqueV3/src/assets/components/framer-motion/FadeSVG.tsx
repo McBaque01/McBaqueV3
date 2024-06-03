@@ -35,6 +35,9 @@ export const FadeSVG = ({
 
   return (
     <motion.svg variants={Fademotion} className={classname}>
+      <title>
+        Cloud
+      </title>
       <image href={ImagePath} className="h-full w-full" />
     </motion.svg>
   );

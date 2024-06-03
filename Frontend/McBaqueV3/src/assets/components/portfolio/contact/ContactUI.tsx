@@ -1,13 +1,20 @@
 
 import { Icon } from "@iconify/react";
 import { ContactFormUI } from "./ContactFormUI";
+import { Cloud } from "../hero/Cloud";
 
 export const ContactUI = () => {
   return (
-    <div id="Contact" className="flex h-fit w-full justify-center bg-cblue">
+    <div id="Contact" className="flex h-fit w-full justify-center bg-cblue relative">
 
+
+        <Cloud
+          classname="w-fit h-fit absolute top-[3em] 2xl:left-[14em] xl:left-[14em]  left-[70%] transition-all duration-1000"
+          direction="left"
+          delay={2}
+        />
   
-      <div className="flex min-h-screen w-[80%] flex-col gap-2 py-5">
+      <div className="flex min-h-screen w-[80%] flex-col gap-2 py-5 relative z-10">
         <div className="h-fit w-full  text-center">
           <h1 className="font-Montserrat xl:text-[3.6em] 2xl:text-[3.6em] font-black text-[2.4em] text-cred">
             Collaborate with me

@@ -39,6 +39,7 @@ export const NavigationUI = () => {
               ImagePath={McLogo}
               classname="w-full h-full"
               direction="down"
+              aria-label="Go to Hero section"
             />
           </Navlink>
         </Fade>

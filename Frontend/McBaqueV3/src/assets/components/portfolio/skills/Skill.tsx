@@ -5,7 +5,7 @@ import ValoAPI from "../../../media/image/ValoAPI.png";
 import handleRedirectToURL from "../../../utils/handleRedirectToURL";
 import LightNSeek from "../../../media/image/LightNSeek.png";
 import PortfolioV3 from "../../../media/image/PortfolioV3.png";
-
+import { Cloud } from "../hero/Cloud";
 
 
 export interface skilltype {
@@ -35,6 +35,18 @@ export const Skill = () => {
       id="Skill"
       className="relative flex h-fit w-full flex-col items-center bg-cblue"
     >
+
+        <Cloud
+          classname="w-fit h-fit absolute top-[7em] 2xl:left-[16em] xl:left-[16em]  left-[40%] transition-all duration-1000"
+          direction="left"
+          delay={2}
+        />
+
+        <Cloud
+          classname="w-fit h-fit absolute top-[27em] 2xl:left-[60em] xl:left-[60em]  left-[60%] transition-all duration-1000"
+          direction="left"
+          delay={2}
+        />
 
     
       <div className="absolute top-[7em] flex w-full justify-center 2xl:top-[6em] ">

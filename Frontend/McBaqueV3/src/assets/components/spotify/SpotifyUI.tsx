@@ -49,7 +49,7 @@ export const SpotifyUI = () => {
                         <h1 className='text-[16px] font-Montserrat font-normal text-clightbrown tracking-wide'>
                             {currMusic?.name}
                         </h1>
-                        <p className='text-[14px] font-Montserrat text-cred tracking-widest border-b-2'>
+                        <p className='text-[14px] font-Montserrat text-cred tracking-widest'>
                         {currMusic?.artists[0].name}
                         </p>
                     </div>

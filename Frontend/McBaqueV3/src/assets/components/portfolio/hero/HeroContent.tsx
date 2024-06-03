@@ -25,7 +25,7 @@ export const HeroContent = () => {
           </h2>
         </FadeJr>
 
-        <FadeJr classname=" ">
+        <FadeJr classname="sm:hidden md:hidden lg:hidden">
           <p className="relative z-10 w-full font-Montserrat text-[12px] font-normal tracking-widest text-clightbrown transition-all duration-1000 xl:w-[80%] xl:text-[1em] 2xl:w-[80%] 2xl:text-[1.2em]">
             Passionate Web Developer creating innovative and user-friendly web
             applications. 
@@ -33,6 +33,13 @@ export const HeroContent = () => {
             keen eye for detail and performance. Committed to delivering
             seamless digital experiences.
           </p>
+        </FadeJr>
+        <FadeJr classname="2xl:hidden xl:hidden">
+          <p className="relative z-10 w-full font-Montserrat text-[12px] font-normal tracking-widest text-clightbrown transition-all duration-1000 xl:w-[80%] xl:text-[1em] 2xl:w-[80%] 2xl:text-[1.2em]">
+            Passionate Web Developer creating innovative and user-friendly web
+            applications. 
+          </p>
+         
         </FadeJr>
 
      
