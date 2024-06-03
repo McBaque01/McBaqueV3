@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import { AuthorizeMe, getMyTokens, getMyCurrentPlayingMusic, acceptToken, refreshAccessTokenOnStartup } from '../config/spotifyAPI.js';
+import { AuthorizeMe, getMyTokens, getMyCurrentPlayingMusic, acceptToken, SpotifyRefresh } from '../config/spotifyAPI.js';
 import { SpotifyCallBack } from '../config/spotifyAPI.js';
 import { AuthorizeMeServer } from '../config/spotifyAPI.js';
 
@@ -11,7 +11,8 @@ router.get("/Callback",SpotifyCallBack)
 router.get("/SpotifyServer",AuthorizeMeServer)
 router.get("/SpotifyToken",getMyTokens)
 router.get("/CurrentMusic",getMyCurrentPlayingMusic)
-router.get("/SpotifyRefresh",refreshAccessTokenOnStartup)
+
+router.get("/Refresh",SpotifyRefresh)
 
 
 

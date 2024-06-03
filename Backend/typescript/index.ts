@@ -3,7 +3,7 @@ import app from './app/app.js';
 import { ConnectMongo } from './app/config/mongoDb.js';
 import { env } from './app/config/env.js';
 import { AuthorizeMeServer } from './app/config/spotifyAPI.js';
-import { refreshAccessTokenOnStartup } from './app/config/spotifyAPI.js';
+
 
 import dotenv from "dotenv"
 dotenv.config()

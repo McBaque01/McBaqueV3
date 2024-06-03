@@ -125,21 +125,23 @@ export const acceptToken = (req, res) => {
     const sdkdata = SpotifyApi.withAccessToken("client-id", data);
     console.log("SDK", sdkdata);
 };
-export const refreshAccessTokenOnStartup = async () => {
+export const SpotifyRefresh = async (req, res) => {
     if (!SpotifyRefreshToken) {
         console.log('No refresh token available. Please authorize the application.');
-        return;
+        res.status(200).json({ message: "No Refresh token" });
+        ;
     }
     try {
         const data = await spotifyApi.refreshAccessToken();
         const access_token = data.body['access_token'];
         spotifyApi.setAccessToken(access_token);
-        console.log('Access token refreshed on server startup');
-        return access_token;
+        res.status(200).json({ message: "Token has refreshed!" });
+        ;
     }
     catch (error) {
         console.error('Error refreshing access token on startup:', error);
-        return;
+        res.status(400).json({ message: "Error refreshing access token on startup", error: error });
+        ;
     }
 };
 // export const getCurrentMusic = () => {
