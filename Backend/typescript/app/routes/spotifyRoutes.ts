@@ -11,7 +11,7 @@ router.get("/Callback",SpotifyCallBack)
 router.get("/SpotifyServer",AuthorizeMeServer)
 router.get("/SpotifyToken",getMyTokens)
 router.get("/CurrentMusic",getMyCurrentPlayingMusic)
-router.post("/SpotifyRefresh",refreshAccessTokenOnStartup)
+router.get("/SpotifyRefresh",refreshAccessTokenOnStartup)
 
 
 
