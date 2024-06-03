@@ -39,22 +39,22 @@ export const SpotifyUI = () => {
             <div className='w-[80%] h-fit text-center font-Montserrat font-semibold flex justify-center flex-col items-center gap-4 min-w-[20em]'>
                 {currMusic ? 
                 <>
-                <h1 className='text-[1em] border-b-2 px-4 text-cred font-Montserrat tracking-widest border-clightbrown'>Spotify on</h1> 
-                <div className='  w-full 2xl:h-[8em] xl:h-[8em] h-[5em] max-w-[30em] flex flex-row justify-center items-center border-cred border-2 p-2 '>
+                <h1 className='text-[1em] px-4 text-cred font-Montserrat tracking-widest border-clightbrown'>I'm currently listening to</h1> 
+                <div className='w-full 2xl:h-[5em] xl:h-[5em] h-[5em] max-w-[30em] min-w-fit flex flex-row justify-center items-center border-cred border-2 bg-[#191414] rounded-md'>
                     <img
                         src={currMusic?.album.images[1].url}
                         alt='Spotify Image'
-                        className='h-full w-fit'
+                        className='h-full w-fit rounded'
                     ></img>
                     <div className=' w-full h-full flex flex-col justify-center items-start p-2'>
-                        <h1 className='text-[16px] font-Montserrat font-normal text-clightbrown tracking-wide'>
+                        <h1 className='text-[15px] font-Montserrat font-semibold tracking-wide text-[#1DB954]'>
                             {currMusic?.name}
                         </h1>
-                        <p className='text-[14px] font-Montserrat text-cred tracking-widest'>
+                        <p className='text-[12px] font-Montserrat text-cred tracking-widest font-bold'>
                         {currMusic?.artists[0].name}
                         </p>
                     </div>
-                    <Icon icon="lucide:audio-lines" className='text-[4em] text-clightbrown'/>
+                    <Icon icon="lucide:audio-lines" className='text-[4em] text-clightbrown p-4'/>
                     
                 </div>
                 </>
