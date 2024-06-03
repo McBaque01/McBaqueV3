@@ -1,6 +1,7 @@
 import "./App.css";
 import { RouteHero } from "./assets/routes/RouteHero";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
             <meta name="author" content="Mark John Baque, Mc Baque" />
       
         </Helmet>
-      <RouteHero />
+        <RouteHero />
+        <SpeedInsights />
       </HelmetProvider>
     </>
   );
