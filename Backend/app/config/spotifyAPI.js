@@ -135,6 +135,7 @@ export const SpotifyRefresh = async (req, res) => {
         const data = await spotifyApi.refreshAccessToken();
         const access_token = data.body['access_token'];
         spotifyApi.setAccessToken(access_token);
+        console.log("access token: ", access_token);
         res.status(200).json({ message: "Token has refreshed!" });
         ;
     }
