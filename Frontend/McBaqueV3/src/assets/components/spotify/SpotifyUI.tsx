@@ -72,7 +72,7 @@ export const SpotifyUI = () => {
                 <>
                 <h1 className='text-[1em] px-4 text-cred font-Montserrat tracking-widest border-clightbrown'>I'm currently listening to</h1> 
                 <div className='w-full 2xl:h-[5em] xl:h-[5em] h-[5em] max-w-[30em] min-w-fit flex flex-row justify-center items-center border-cred border-2 bg-[#191414] rounded-md'>
-                    <div className='h-full w-fit bg-white relative'>
+                    <div className='h-full w-fit relative'>
                         <div className='absolute w-full h-full flex justify-center items-center'>
                                 <Icon icon="iconamoon:player-play-fill" className={`${isPlaying ? "hidden" : ""} text-[2em] text-[#1DB954]`} onClick={handlePlay}/>
                                 <Icon icon="fluent:pause-32-filled" className={`${isPlaying ? "" : "hidden"} text-[2em]  text-[#1DB954]`} onClick={handlePause}/>
