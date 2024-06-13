@@ -35,7 +35,6 @@ export const SpotifyUI = () => {
             getMusic();
             const intervalId = setInterval(() => {
                 getMusic();
-              
               }, 30000);
 
             return () => clearInterval(intervalId);
