@@ -11,14 +11,20 @@ export const SpotifyUI = () => {
     const audioRef = useRef<ReactAudioPlayer | null>(null)
     const BackendRoute: string = import.meta.env.REACT_APP_BACKEND_ROUTE
     const [currMusic, setcurrMusic] = useState<SpotifyTypes | null>(null)
+    const [prevMusic, setprevMusic] = useState<string>("")
     const [isPlaying, setIsPlaying] = useState(false);
     const getMusic = async () => {
         try {
            // Assuming the response contains the URL
              const response = await axios.get(`${BackendRoute}/Spotify/CurrentMusic`);
-             console.log("res",response)
-            console.log(response.data)  
+            //  console.log("res",response)
+            // console.log(response.data) 
             setcurrMusic(response.data)
+            if(prevMusic !== response.data.name){
+                setprevMusic(response.data.name)
+                // audioRef.current?.audioEl.current?.pause();
+                setIsPlaying(false);
+            }
         } catch (error) {
             console.log("SPOTIFY UI",error)
         }
@@ -29,6 +35,7 @@ export const SpotifyUI = () => {
             getMusic();
             const intervalId = setInterval(() => {
                 getMusic();
+              
               }, 30000);
 
             return () => clearInterval(intervalId);
@@ -49,7 +56,9 @@ export const SpotifyUI = () => {
               }
         }
         console.log("Current Music",currMusic?.name)
-        console.log(audioRef)
+        // console.log(audioRef)
+        // console.log(prevMusic)
+       
   return (
     <>
         <div className='w-full h-fit flex justify-center bg-cblue py-4'>
