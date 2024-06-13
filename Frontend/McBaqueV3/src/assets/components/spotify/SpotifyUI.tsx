@@ -20,11 +20,7 @@ export const SpotifyUI = () => {
             //  console.log("res",response)
             // console.log(response.data) 
             setcurrMusic(response.data)
-            if(prevMusic !== response.data.name){
-                setprevMusic(response.data.name)
-                // audioRef.current?.audioEl.current?.pause();
-                setIsPlaying(false);
-            }
+            
         } catch (error) {
             console.log("SPOTIFY UI",error)
         }
@@ -39,6 +35,16 @@ export const SpotifyUI = () => {
 
             return () => clearInterval(intervalId);
         },[])
+
+
+        useEffect(() => {
+            if (prevMusic !== currMusic?.name) {
+                setprevMusic(currMusic ? currMusic.name : "");
+                audioRef.current?.audioEl.current?.pause();
+                setIsPlaying(false);
+             
+            }
+          }, [currMusic]);
 
 
        const handlePlay = () => {  
@@ -56,7 +62,7 @@ export const SpotifyUI = () => {
         }
         console.log("Current Music",currMusic?.name)
         // console.log(audioRef)
-        // console.log(prevMusic)
+        // console.log("PrevMusic",prevMusic)
        
   return (
     <>
