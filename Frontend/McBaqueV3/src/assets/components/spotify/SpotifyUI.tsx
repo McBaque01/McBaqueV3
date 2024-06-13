@@ -71,9 +71,9 @@ export const SpotifyUI = () => {
                 {currMusic ? 
                 <>
                 <h1 className='text-[1em] px-4 text-cred font-Montserrat tracking-widest border-clightbrown'>I'm currently listening to</h1> 
-                <div className='w-full 2xl:h-[5em] xl:h-[5em] h-[5em] max-w-[30em] min-w-fit flex flex-row justify-center items-center border-cred border-2 bg-[#191414] rounded-md'>
+                <div className=' 2xl:h-[5em] xl:h-[5em] h-[5em] max-w-[26em] sm:min-w-fit  flex flex-row justify-center items-center border-cred border-2 bg-[#191414] rounded-md relative'>
                     <div className='h-full w-fit relative'>
-                        <div className='absolute w-full h-full flex justify-center items-center'>
+                        <div className={`absolute w-full h-full flex justify-center items-center ${currMusic.preview_url !== null ? "" : "hidden"}`}>
                                 <Icon icon="iconamoon:player-play-fill" className={`${isPlaying ? "hidden" : ""} text-[2em] text-[#1DB954]`} onClick={handlePlay}/>
                                 <Icon icon="fluent:pause-32-filled" className={`${isPlaying ? "" : "hidden"} text-[2em]  text-[#1DB954]`} onClick={handlePause}/>
                         </div>
@@ -83,11 +83,12 @@ export const SpotifyUI = () => {
                             className='h-full w-[8em] rounded'
                         ></img>
                     </div>
-                    <div className=' w-full h-full flex flex-col justify-center items-start p-2'>
-                        <h1 className='text-[15px] font-Montserrat font-semibold tracking-wide text-[#1DB954]'>
+                    <div className='w-full h-full flex flex-col justify-center items-start p-2'>
+                        <h1 className='text-[15px] font-Montserrat font-semibold tracking-wide text-[#1DB954] line-clamp-1 text-left'>
                             {currMusic?.name}
+                           
                         </h1>
-                        <p className='text-[12px] font-Montserrat text-cred tracking-widest font-bold'>
+                        <p className='text-[12px] font-Montserrat text-cred tracking-widest font-bold line-clamp-1'>
                         {currMusic?.artists[0].name}
                         </p>
                     </div>
