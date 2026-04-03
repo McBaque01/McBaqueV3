@@ -1,7 +1,5 @@
 import { Icon } from "@iconify/react";
 export const Maintenance = () => {
-
-
   return (
     <div className="h-screen w-full flex flex-col items-center justify-center  bg-gray-800">
       <Icon icon="streamline-cyber-color:maintenance" width="200" height="200" />
